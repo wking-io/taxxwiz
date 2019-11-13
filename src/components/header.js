@@ -32,21 +32,17 @@ const Header = ({ label }) => {
             data-event-label={`${label} - Logo`}
           >
             <Logo
-              theme={isOpen ? "primary-light" : theme}
+              theme={"black"}
               className="h-16 hidden sm:block"
             />
           </Link>
           <nav
-            className={`flex-1 mr-4 text-right ${
-              hideLinks ? "pointer-events-none opacity-0" : ""
-            }`}
+            className={`flex-1 mr-4 text-right`}
           >
             <MenuButton className="pt-8 p-4 relative z-50">
               <VisuallyHidden>{isOpen ? "Close" : "Open"} Menu</VisuallyHidden>
               <span
-                className={`hamburger ${
-                  theme === "light" ? "hamburger--light" : ""
-                }`}
+                className={`hamburger`}
                 aria-hidden
               >
                 <span></span>

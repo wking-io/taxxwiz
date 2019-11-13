@@ -30,7 +30,7 @@ export const StarIcon = ({ filled, className, hoverFill, ...props }) => (
 )
 
 export const LogoIcon = ({
-  logoColor = "primary",
+  logoColor = "black",
   ...props
 }) => (
   <svg {...props} height="16px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3452 500.46">
