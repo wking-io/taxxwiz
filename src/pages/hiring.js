@@ -34,8 +34,8 @@ const HiringPage = () => (
           </ul>
         </div>
       </div>
-      <div data-animate-from-bottom="1">
-        <div className="h-56 relative">
+      <div>
+        <div className="h-56 relative overflow-hidden">
           <div className="absolute inset-0">
             <Image className="apply-image w-10/12 h-full" image="hiring"/>
           </div>
