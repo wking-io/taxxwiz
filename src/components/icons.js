@@ -1,13 +1,8 @@
 import React from "react"
 
 export const ArrowIcon = ({ className, direction, ...props }) => (
-  <svg
-    className={`arrow-${direction} ${className || ""}`}
-    {...props}
-    viewBox="0 0 24 14"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path className="fill-current" d="M12,10,22,0l2,2L12,14,0,2,2,0Z" />
+  <svg className={`arrow-${direction} ${className || ""}`} width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <path className="fill-current" d="M8 19L16 11.0583L15.0001 10.0656L8.7072 16.3126L8.7072 -3.18778e-07L7.29299 -3.80596e-07L7.29299 16.313L0.999842 10.0657L1.42398e-06 11.0583L8 19Z"/>
   </svg>
 )
 
@@ -26,6 +21,12 @@ export const StarIcon = ({ filled, className, hoverFill, ...props }) => (
       className="fill-current"
       points="294.83 350.64 248.68 213.83 348.83 137.64 222.98 137.64 181.83 15.64 140.68 137.64 14.83 137.64 114.98 213.83 68.83 350.64 181.83 264.68 294.83 350.64"
     />
+  </svg>
+)
+
+export const ContactIcon = props => (
+  <svg viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <path className="fill-current" d="M24 2.5C24 1.125 22.92 0 21.6 0H2.4C1.08 0 0 1.125 0 2.5V17.5C0 18.875 1.08 20 2.4 20H21.6C22.92 20 24 18.875 24 17.5V2.5ZM21.6 2.5L12 8.75L2.4 2.5H21.6ZM21.6 17.5H2.4V5L12 11.25L21.6 5V17.5Z"/>
   </svg>
 )
 

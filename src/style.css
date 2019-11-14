@@ -11,6 +11,12 @@ html {
   @apply font-sans text-black;
 }
 
+.visually-hidden {
+  @apply fixed;
+  left: -99999px;
+  visability: hidden;
+}
+
 .link {
   @apply underline font-semibold;
 }
@@ -25,6 +31,17 @@ html {
 
 .link--light:hover {
   @apply text-white;
+}
+
+.link--highlight {
+  @apply bg-no-repeat;
+  background-image: linear-gradient(theme('colors.black'), theme('colors.black'));
+  background-size: calc(100% - theme('spacing.8')) calc(100% - theme('spacing.8'));
+  background-position: theme('spacing.4') theme('spacing.4');
+}
+
+.link--highlight:hover {
+  background-image: linear-gradient(theme('colors.primary.dark'), theme('colors.primary.dark'));
 }
 
 .btn {
@@ -124,6 +141,138 @@ html {
 
 [data-track]:not(form) > * {
   @apply pointer-events-none;
+}
+
+.apply-box {
+  @apply bg-repeat bg-cover w-1/3 ml-auto h-full text-white relative z-10 flex flex-col justify-center;
+  background-image: linear-gradient(to right, rgba(theme('colors.primary.default'), 0.5), rgba(theme('colors.primary.default'), 1) 45%);
+}
+
+.apply-image img {
+  object-position: left bottom !important;
+}
+
+.select select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.radio-input:checked ~ .radio-label {
+  @apply bg-black text-white border-black;
+}
+
+@keyframes fromLeft {
+  from {
+    transform: translateX(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fromRight {
+  from {
+    transform: translateX(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fromTop {
+  from {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fromBottom {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes visibility {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+[data-animate-visibility="0"] {
+  animation: 0.5s ease-in-out 0.2s 1 both visibility;
+}
+
+[data-animate-visibility="1"] {
+  animation: 0.5s ease-in-out 0.4s 1 both visibility;
+}
+
+[data-animate-visibility="2"] {
+  animation: 0.5s ease-in-out 0.6s 1 both visibility;
+}
+
+[data-animate-from-left="0"] {
+  animation: 0.5s ease-in-out 0.2s 1 both fromLeft;
+}
+
+[data-animate-from-right="0"] {
+  animation: 0.5s ease-in-out 0.2s 1 both fromRight;
+}
+
+[data-animate-from-top="0"] {
+  animation: 0.5s ease-in-out 0.2s 1 both fromTop;
+}
+
+[data-animate-from-bottom="0"] {
+  animation: 0.5s ease-in-out 0.2s 1 both fromBottom;
+}
+
+[data-animate-from-left="1"] {
+  animation: 0.5s ease-in-out 0.4s 1 both fromLeft;
+}
+
+[data-animate-from-right="1"] {
+  animation: 0.5s ease-in-out 0.4s 1 both fromRight;
+}
+
+[data-animate-from-top="1"] {
+  animation: 0.5s ease-in-out 0.4s 1 both fromTop;
+}
+
+[data-animate-from-bottom="1"] {
+  animation: 0.5s ease-in-out 0.4s 1 both fromBottom;
+}
+
+[data-animate-from-left="2"] {
+  animation: 0.5s ease-in-out 0.6s 1 both fromLeft;
+}
+
+[data-animate-from-right="2"] {
+  animation: 0.5s ease-in-out 0.6s 1 both fromRight;
+}
+
+[data-animate-from-top="2"] {
+  animation: 0.5s ease-in-out 0.6s 1 both fromTop;
+}
+
+[data-animate-from-bottom="2"] {
+  animation: 0.5s ease-in-out 0.6s 1 both fromBottom;
 }
 
 @tailwind utilities;

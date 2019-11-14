@@ -25,9 +25,8 @@ const colors = {
     default: "#1da1f2",
     hover: "#1a91da",
   },
-  linkedin: {
-    default: "#0073b1",
-    hover: "#025e90",
+  instagram: {
+    default: "#D00F80",
   },
 }
 

@@ -7,7 +7,7 @@ module.exports = {
       "Join a fast growing company that has doubled every year.",
     siteUrl: "https://www.mytaxxwiz.com",
     image: {
-      src: "/images/social-large.jpg",
+      src: "/images/favicon.png",
       alt: "TaxxWiz Logo",
       width: "1200",
       height: "900",
@@ -42,7 +42,7 @@ module.exports = {
         background_color: `#FFFFFF`,
         theme_color: `#FFFFFF`,
         display: `minimal-ui`,
-        icon: `static/images/logo-icon.png`, // This path is relative to the root of the site.
+        icon: `static/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-postcss`,
