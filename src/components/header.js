@@ -7,17 +7,19 @@ import { Image } from './images';
 import { ContactIcon, TwitterIcon, InstagramIcon, FacebookIcon } from './icons';
 
 function useWindowWidth() {
-	const [ isMobile, setSize ] = useState(window.innerWidth < 768);
+	if (typeof window != 'undefined') {
+		const [ isMobile, setSize ] = useState(window.innerWidth < 768);
 
-	useEffect(() => {
-		const handleResize = () => setSize(window.innerWidth < 768);
-		window.addEventListener('resize', handleResize);
-		return () => {
-			window.removeEventListener('resize', handleResize);
-		};
-	});
-
-	return isMobile;
+		useEffect(() => {
+			const handleResize = () => setSize(window.innerWidth < 768);
+			window.addEventListener('resize', handleResize);
+			return () => {
+				window.removeEventListener('resize', handleResize);
+			};
+		});
+		return isMobile;
+	}
+	return true;
 }
 
 const MobileMenu = () => (
