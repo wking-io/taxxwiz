@@ -10,34 +10,36 @@ const HiringPage = () => {
 	return (
 		<Layout label="Hiring">
 			<SEO />
-			<section className="mt-16">
-				<div className="flex pl-24 pr-16 mt-24">
-					<div className="flex-1">
-						<div className="mr-32 max-w-5xl">
-							<h2 className="text-6xl font-bold tracking-tight leading-none" data-animate-from-left="0">
-								Join a fast growing company that has doubled every year.
-							</h2>
-							<div className="flex mt-24" data-animate-from-bottom="1">
-								<div className="flex-1 mr-8">
-									<h3 className="uppercase font-bold text-lg">Our Mission</h3>
-									<p className="mt-6 text-grey-500">
-										Taxx Wiz is a company that partners with individuals and small businesses alike
-										to offer strong Tax Preparation Services, book keeping, financial, and
-										accounting services.
-									</p>
-								</div>
-								<div className="flex-1 ml-8">
-									<h3 className="uppercase font-bold text-lg">Our Philosophy</h3>
-									<p className="mt-6 text-grey-500">
-										Our Philosophy is simple. Provide fast, accurate, and honest services while
-										keeping the work fun and innovative. We always work in the best interest of our
-										customers.
-									</p>
-								</div>
+			<section className="mt-8 md:mt-16">
+				<div className="relative p-8 md:p-16 lg:p-24">
+					<div className="md:mr-8 max-w-6xl lg:mx-auto">
+						<div className="flex flex-col md:flex-row" data-animate-from-left="0">
+							<Image
+								image="taxxwiz"
+								className="hidden md:block taxxwiz w-2/5 h-auto mb-8 md:mr-20"
+								imgStyle={{ width: '100%', height: 'auto' }}
+							/>
+							<div>
+								<h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-none mb-8">
+									Join a fast growing company that{' '}
+									<span className="text-primary">has doubled every year.</span>
+								</h2>
+								<a
+									href="#application"
+									className="btn--icon bg-primary hover:bg-primary-dark text-white uppercase flex items-center justify-start font-bold text-lg max-w-xs sm:w-56"
+								>
+									<span className="px-8 inline-block flex-1 text-center">Apply Now</span>
+									<span className="icon p-4 border-l border-primary-dark inline-block">
+										<ArrowIcon className="h-full w-auto" direction="down" />
+									</span>
+								</a>
 							</div>
 						</div>
 					</div>
-					<div className="flex flex-col justify-end items-center" data-animate-from-right="1">
+					<div
+						className="hidden absolute right-0 top-0 mr-16 md:flex flex-col justify-end items-center"
+						data-animate-from-right="1"
+					>
 						<div className="w-px h-64 bg-grey-300 mb-20" />
 						<ul className="flex flex-col items-center mb-20">
 							<li className="mb-8 h-4">
@@ -58,14 +60,29 @@ const HiringPage = () => {
 						</ul>
 					</div>
 				</div>
-				<div>
-					<div className="h-56 relative overflow-hidden">
-						<div className="absolute inset-0">
-							<Image className="apply-image w-10/12 h-full" image="hiring" />
+				<div className="flex flex-col-reverse lg:flex-row relative" data-animate-from-bottom="1">
+					<Image className="hiring-image w-full lg:w-1/2 flex-shrink-0 mt-2 lg:mt-0" image="hiring" />
+					<div>
+						<div className="p-8 md:p-16 md:pr-32 lg:pr-16 lg:pt-12">
+							<div className="">
+								<h3 className="uppercase font-bold text-lg">Our Mission</h3>
+								<p className="mt-3 text-grey-500">
+									Taxx Wiz is a company that partners with individuals and small businesses alike to
+									offer strong Tax Preparation Services, book keeping, financial, and accounting
+									services.
+								</p>
+							</div>
+							<div className="mt-12">
+								<h3 className="uppercase font-bold text-lg">Our Philosophy</h3>
+								<p className="mt-3 text-grey-500">
+									Our Philosophy is simple. Provide fast, accurate, and honest services while keeping
+									the work fun and innovative. We always work in the best interest of our customers.
+								</p>
+							</div>
 						</div>
 						<div className="apply-box">
 							<a href="#application" className="block p-12">
-								<h3 className="text-4xl font-bold tracking-tight">Apply Now</h3>
+								<h3 className="text-2xl md:text-4xl font-bold tracking-tight">Apply Now</h3>
 								<p className="mt-3 leading-tight">
 									We are a growing family and we want you to be a part of the Team.
 								</p>
@@ -76,34 +93,35 @@ const HiringPage = () => {
 						</div>
 					</div>
 				</div>
+				<div />
 			</section>
-			<section id="application" className="w-5/6 max-w-3xl mx-auto mt-32">
-				<h2 className="text-5xl font-bold tracking-tight">Application Form.</h2>
-				<div className="mt-12 h-1 w-32 bg-primary" />
+			<section id="application" className="w-5/6 max-w-3xl mx-auto mt-64 md:mt-48">
+				<h2 className="text-3xl md:text-5xl font-bold tracking-tight">Application Form.</h2>
+				<div className="mt-4 md:mt-12 h-1 w-32 bg-primary" />
 				<form className="mt-12 pb-32" action="">
-					<div className="flex">
-						<div className="flex flex-col flex-1 mr-6">
-							<label htmlFor="name" className="font-bold">
+					<div className="flex flex-col md:flex-row">
+						<div className="flex flex-col flex-1 m-0 md:mr-6">
+							<label htmlFor="name" className="font-bold text-sm lg:text-base">
 								Email Address
 							</label>
 							<input className="bg-grey-200 mt-4 p-2" id="name" type="text" />
 						</div>
-						<div className="flex flex-col flex-1 ml-6">
-							<label htmlFor="location" className="font-bold">
+						<div className="flex flex-col flex-1 mt-8 md:mt-0 md:ml-6">
+							<label htmlFor="location" className="font-bold text-sm lg:text-base">
 								Location <span className="font-normal">(City, State)</span>
 							</label>
 							<input className="bg-grey-200 mt-4 p-2" id="location" type="text" />
 						</div>
 					</div>
-					<div className="flex mt-8">
-						<div className="flex flex-col flex-1 mr-6">
-							<label htmlFor="name" className="font-bold">
+					<div className="flex flex-col md:flex-row mt-8">
+						<div className="flex flex-col flex-1 m-0 md:mr-6">
+							<label htmlFor="name" className="font-bold text-sm lg:text-base">
 								Full Name
 							</label>
 							<input className="bg-grey-200 mt-4 p-2" id="name" type="text" />
 						</div>
-						<div className="flex flex-col flex-1 ml-6">
-							<label htmlFor="education" className="font-bold">
+						<div className="flex flex-col flex-1 mt-8 md:mt-0 md:ml-6">
+							<label htmlFor="education" className="font-bold text-sm lg:text-base">
 								Highest Education Level
 							</label>
 							<div className="select mt-4 relative">
@@ -128,15 +146,15 @@ const HiringPage = () => {
 							</div>
 						</div>
 					</div>
-					<div className="flex mt-8">
-						<div className="flex flex-col flex-1 mr-6">
-							<label htmlFor="name" className="font-bold">
+					<div className="flex flex-col md:flex-row mt-8">
+						<div className="flex flex-col flex-1 m-0 md:mr-6">
+							<label htmlFor="name" className="font-bold text-sm lg:text-base">
 								Most Recent Employer
 							</label>
 							<input className="bg-grey-200 mt-4 p-2" id="name" type="text" />
 						</div>
-						<div className="flex flex-col flex-1 ml-6">
-							<p className="font-bold">What Kind Of Work Are You Looking For?</p>
+						<div className="flex flex-col flex-1 mt-8 md:mt-0 md:ml-6">
+							<p className="font-bold text-sm lg:text-base">What Kind Of Work Are You Looking For?</p>
 							<div className="flex mt-4">
 								<div className="radio w-1/2">
 									<input
@@ -172,7 +190,7 @@ const HiringPage = () => {
 						</div>
 					</div>
 					<div className="flex flex-col flex-1 mt-8">
-						<label htmlFor="position" className="font-bold">
+						<label htmlFor="position" className="font-bold text-sm lg:text-base">
 							What position are you applying for?
 						</label>
 						<div className="select mt-4 relative">
@@ -201,7 +219,7 @@ const HiringPage = () => {
 					</div>
 					{showField ? (
 						<div className="flex flex-col flex-1 mt-8">
-							<label htmlFor="availability" className="font-bold">
+							<label htmlFor="availability" className="font-bold text-sm lg:text-base">
 								What times would you be available to work?
 							</label>
 							<div className="select mt-4 relative">
@@ -225,13 +243,13 @@ const HiringPage = () => {
 						</div>
 					) : null}
 					<div className="flex flex-col flex-1 mt-8">
-						<label htmlFor="experience" className="font-bold">
+						<label htmlFor="experience" className="font-bold text-sm lg:text-base">
 							How many years of experience?
 						</label>
 						<input className="bg-grey-200 mt-4 p-2" name="experience" id="experience" type="text" />
 					</div>
 					<div className="flex flex-col flex-1 mt-8">
-						<label htmlFor="good-fit" className="font-bold">
+						<label htmlFor="good-fit" className="font-bold text-sm lg:text-base">
 							How would you be a good fit for our family?{' '}
 							<span className="font-normal">(In three sentences or less)</span>
 						</label>
