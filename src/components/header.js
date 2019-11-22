@@ -75,7 +75,7 @@ const MobileMenu = () => (
 );
 
 const DesktopMenu = () => (
-	<nav className={`flex-1 text-right flex items-center justify-end`}>
+	<nav className="flex-1 text-right flex items-center justify-end">
 		<Link to="/" className="text-black hover:underline p-4 inline-block mr-6 lg:mr-12">
 			Save More Money
 		</Link>
