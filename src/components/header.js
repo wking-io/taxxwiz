@@ -19,7 +19,7 @@ function useWindowWidth() {
 		});
 		return isMobile;
 	}
-	return true;
+	return false;
 }
 
 const MobileMenu = () => (
