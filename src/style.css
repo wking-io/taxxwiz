@@ -202,6 +202,16 @@ html {
 	}
 }
 
+.contact {
+	min-height: calc(100vh - 66px);
+}
+
+@screen md {
+	.contact {
+		min-height: calc(100vh - 88px);
+	}
+}
+
 @keyframes fromLeft {
 	from {
 		transform: translateX(-40px);

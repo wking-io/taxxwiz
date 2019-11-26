@@ -1,37 +1,31 @@
-import React from "react"
+import React from 'react';
 
-export const Field = ({ name, label, value, update, dark }) => (
-  <div className={`flex flex-col mb-4 ${dark ? "" : "border border-black"}`}>
-    <label className={dark ? "mb-2 text-white" : "my-2 mx-4"} htmlFor={name}>
-      {label}
-    </label>
-    <input
-      className={
-        dark
-          ? "bg-grey-600 text-white text-sm p-2"
-          : "bg-transparent text-black px-4 pb-4"
-      }
-      name={name}
-      value={value}
-      onChange={({ target }) => update(target.value)}
-    />
-  </div>
-)
+export const Field = ({ name, label, value, placeholder, update }) => (
+	<div className="flex flex-col mb-8">
+		<label className="mb-4 text-grey-600" htmlFor={name}>
+			{label}
+		</label>
+		<input
+			className="border-b border-grey-300 focus:border-grey-600 pb-4 text-2xl"
+			name={name}
+			value={value}
+			placeholder={placeholder}
+			onChange={({ target }) => update(target.value)}
+		/>
+	</div>
+);
 
-export const Textarea = ({ name, label, value, update, dark }) => (
-  <div className={`flex flex-col mb-4 ${dark ? "" : "border border-black"}`}>
-    <label className={dark ? "mb-2 text-white" : "my-2 mx-4"} htmlFor={name}>
-      {label}
-    </label>
-    <textarea
-      className={
-        dark
-          ? "bg-grey-600 text-white text-sm p-2"
-          : "bg-transparent text-black h-48 px-4 pb-4"
-      }
-      name={name}
-      value={value}
-      onChange={({ target }) => update(target.value)}
-    />
-  </div>
-)
+export const Textarea = ({ name, label, value, update }) => (
+	<div className="flex flex-col lg:border-l border-grey-400 pb-16 lg:p-16">
+		<label className="mb-4 text-grey-600" htmlFor={name}>
+			{label}
+		</label>
+		<textarea
+			className="bg-transparent text-black h-full text-2xl"
+			name={name}
+			value={value}
+			placeholder="Write text here..."
+			onChange={({ target }) => update(target.value)}
+		/>
+	</div>
+);

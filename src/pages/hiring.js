@@ -43,17 +43,15 @@ const HiringPage = () => {
 						<div className="w-px h-64 bg-grey-300 mb-20" />
 						<ul className="flex flex-col items-center mb-20">
 							<li className="mb-8 h-4">
-								<a className="text-black hover:text-twitter" href="/hiring">
-									<TwitterIcon className="h-full w-auto" />
-								</a>
-							</li>
-							<li className="mb-8 h-4">
-								<a className="text-black hover:text-instagram" href="/hiring">
+								<a
+									className="text-black hover:text-instagram"
+									href="https://www.instagram.com/taxxwiz/?hl=en"
+								>
 									<InstagramIcon className="h-full w-auto" />
 								</a>
 							</li>
 							<li className="h-4">
-								<a className="text-black hover:text-facebook" href="/hiring">
+								<a className="text-black hover:text-facebook" href="https://www.facebook.com/taxxwiz/">
 									<FacebookIcon className="h-full w-auto" />
 								</a>
 							</li>

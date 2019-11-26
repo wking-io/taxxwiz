@@ -37,8 +37,7 @@ const MobileMenu = () => (
 				</MenuButton>
 				<MenuList className="fixed inset-0 bg-black text-white z-40 flex flex-col justify-end p-12 sm:p-16 md:p-20 lg:p-24">
 					<MenuLink
-						as={Link}
-						to="/hiring"
+						href="http://mytaxxwiz.com/"
 						className="font-bold text-lg hover:underline p-4 inline-block mr-12"
 					>
 						Save More Money
@@ -76,9 +75,9 @@ const MobileMenu = () => (
 
 const DesktopMenu = () => (
 	<nav className="flex-1 text-right flex items-center justify-end">
-		<Link to="/" className="text-black hover:underline p-4 inline-block mr-6 lg:mr-12">
+		<a href="http://mytaxxwiz.com/" className="text-black hover:underline p-4 inline-block mr-6 lg:mr-12">
 			Save More Money
-		</Link>
+		</a>
 		<Link to="/hiring" className="link--highlight text-white p-4 inline-block mr-6 lg:mr-12">
 			We Are Hiring
 		</Link>
