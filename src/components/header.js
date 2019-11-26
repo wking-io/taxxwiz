@@ -83,16 +83,16 @@ const Header = ({ label }) => {
 	const isMobile = useWindowWidth();
 	return (
 		<header className="flex items-center w-full px-8 md:px-16 mt-2 md:mt-8">
-			<Link
+			<a
 				className="block relative z-50"
-				to="/"
+				href="http://mytaxxwiz.com/"
 				data-track
 				data-event-category="Navigation"
 				data-event-action="Viewed Home"
 				data-event-label={`${label} - Logo`}
 			>
 				<Image image="logo" className="w-24 md:w-40 block" imgStyle={{ width: '100%', height: 'auto' }} />
-			</Link>
+			</a>
 			{isMobile ? <MobileMenu /> : <DesktopMenu />}
 		</header>
 	);

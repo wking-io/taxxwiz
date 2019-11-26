@@ -99,7 +99,18 @@ const IndexPage = () => {
 			<section id="application" className="w-5/6 max-w-3xl mx-auto mt-64 md:mt-48">
 				<h2 className="text-3xl md:text-5xl font-bold tracking-tight">Application Form.</h2>
 				<div className="mt-4 md:mt-12 h-1 w-32 bg-primary" />
-				<form className="mt-12 pb-32" action="">
+				<form
+					className="mt-12 pb-32"
+					name="hiring"
+					method="POST"
+					action="/hiring-thank-you"
+					netlify-honeypot="bot-field"
+					data-netlify="true"
+					data-track
+					data-event-category="Hiring"
+					data-event-action="Submitted Application"
+					data-event-label="Hiring Form"
+				>
 					<div className="flex flex-col md:flex-row">
 						<div className="flex flex-col flex-1 m-0 md:mr-6">
 							<label htmlFor="name" className="font-bold text-sm lg:text-base">
