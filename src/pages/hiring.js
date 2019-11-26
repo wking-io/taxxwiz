@@ -21,9 +21,12 @@ const HiringPage = () => {
 							/>
 							<div>
 								<h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-none mb-8">
+									Time for your Taxxes to start paying you
+								</h2>
+								<h3 className="text-xl md:text-2xl leading-snug mb-12">
 									Join a fast growing company that{' '}
 									<span className="text-primary">has doubled every year.</span>
-								</h2>
+								</h3>
 								<a
 									href="#application"
 									className="btn--icon bg-primary hover:bg-primary-dark text-white uppercase flex items-center justify-start font-bold text-lg max-w-xs sm:w-56"

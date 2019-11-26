@@ -38,13 +38,34 @@ const ContactPage = () => {
 					</label>
 				</VisuallyHidden>
 				<div className="w-full lg:w-1/2 xl:w-2/5 px-16 lg:p-16">
-					<h2 className="text-3xl md:text-4xl font-sans tracking-tight font-bold leading-tight">
+					<h2 className=" text-3xl md:text-4xl font-sans tracking-tight font-bold leading-tight">
 						Do you have questions for us? Send us a message.
 					</h2>
-          <div className="h-1 bg-primary w-24 mt-8 mb-12"></div>
-					<Field name="name" label="Full Name" placeholder="Write name here..." value={name} update={updateName} dark />
-					<Field name="phone-number" label="Phone Number" placeholder="Write phone number here..." value={phone} update={updatePhone} dark />
-					<Field name="email" label="Email Address" placeholder="Write name here..." value={email} update={updateEmail} dark />
+					<div className="h-1 bg-primary w-24 mt-8 mb-12" />
+					<Field
+						name="name"
+						label="Full Name"
+						placeholder="Write name here..."
+						value={name}
+						update={updateName}
+						dark
+					/>
+					<Field
+						name="phone-number"
+						label="Phone Number"
+						placeholder="Write phone number here..."
+						value={phone}
+						update={updatePhone}
+						dark
+					/>
+					<Field
+						name="email"
+						label="Email Address"
+						placeholder="Write name here..."
+						value={email}
+						update={updateEmail}
+						dark
+					/>
 				</div>
 				<div className="flex-1 px-16 lg:p-0">
 					<Textarea name="message" label="Message" value={message} update={updateMessage} dark />
