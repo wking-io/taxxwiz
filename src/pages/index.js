@@ -120,16 +120,16 @@ const IndexPage = () => {
 					</VisuallyHidden>
 					<div className="flex flex-col md:flex-row">
 						<div className="flex flex-col flex-1 m-0 md:mr-6">
-							<label htmlFor="name" className="font-bold text-sm lg:text-base">
+							<label htmlFor="email" className="font-bold text-sm lg:text-base">
 								Email Address
 							</label>
-							<input className="bg-grey-200 mt-4 p-2" id="name" type="text" />
+							<input className="bg-grey-200 mt-4 p-2" name="Email Address" id="email" type="text" />
 						</div>
 						<div className="flex flex-col flex-1 mt-8 md:mt-0 md:ml-6">
 							<label htmlFor="location" className="font-bold text-sm lg:text-base">
 								Location <span className="font-normal">(City, State)</span>
 							</label>
-							<input className="bg-grey-200 mt-4 p-2" id="location" type="text" />
+							<input className="bg-grey-200 mt-4 p-2" name="Location" id="location" type="text" />
 						</div>
 					</div>
 					<div className="flex flex-col md:flex-row mt-8">
@@ -137,7 +137,7 @@ const IndexPage = () => {
 							<label htmlFor="name" className="font-bold text-sm lg:text-base">
 								Full Name
 							</label>
-							<input className="bg-grey-200 mt-4 p-2" id="name" type="text" />
+							<input className="bg-grey-200 mt-4 p-2" name="Full Name" id="name" type="text" />
 						</div>
 						<div className="flex flex-col flex-1 mt-8 md:mt-0 md:ml-6">
 							<label htmlFor="education" className="font-bold text-sm lg:text-base">
@@ -146,7 +146,7 @@ const IndexPage = () => {
 							<div className="select mt-4 relative">
 								<select
 									className="bg-grey-200 appearance-none w-full p-2"
-									name="education"
+									name="Education"
 									id="education"
 									defaultValue="No Answer"
 								>
@@ -167,10 +167,15 @@ const IndexPage = () => {
 					</div>
 					<div className="flex flex-col md:flex-row mt-8">
 						<div className="flex flex-col flex-1 m-0 md:mr-6">
-							<label htmlFor="name" className="font-bold text-sm lg:text-base">
+							<label htmlFor="employer" className="font-bold text-sm lg:text-base">
 								Most Recent Employer
 							</label>
-							<input className="bg-grey-200 mt-4 p-2" id="name" type="text" />
+							<input
+								className="bg-grey-200 mt-4 p-2"
+								name="Most Recent Employer"
+								id="employer"
+								type="text"
+							/>
 						</div>
 						<div className="flex flex-col flex-1 mt-8 md:mt-0 md:ml-6">
 							<p className="font-bold text-sm lg:text-base">What Kind Of Work Are You Looking For?</p>
@@ -215,7 +220,7 @@ const IndexPage = () => {
 						<div className="select mt-4 relative">
 							<select
 								className="bg-grey-200 appearance-none w-full p-2"
-								name="position"
+								name="Position"
 								id="position"
 								defaultValue="No Answer"
 								onChange={({ target }) => {
@@ -244,7 +249,7 @@ const IndexPage = () => {
 							<div className="select mt-4 relative">
 								<select
 									className="bg-grey-200 appearance-none w-full p-2"
-									name="availability"
+									name="Availability"
 									defaultValue="No Answer"
 									id="availability"
 								>
@@ -265,14 +270,14 @@ const IndexPage = () => {
 						<label htmlFor="experience" className="font-bold text-sm lg:text-base">
 							How many years of experience?
 						</label>
-						<input className="bg-grey-200 mt-4 p-2" name="experience" id="experience" type="text" />
+						<input className="bg-grey-200 mt-4 p-2" name="Work Experience" id="experience" type="text" />
 					</div>
 					<div className="flex flex-col flex-1 mt-8">
 						<label htmlFor="good-fit" className="font-bold text-sm lg:text-base">
 							How would you be a good fit for our family?{' '}
 							<span className="font-normal">(In three sentences or less)</span>
 						</label>
-						<textarea name="fit" id="good-fit" className="bg-grey-200 mt-4 p-2 h-32" />
+						<textarea name="Good Fit" id="good-fit" className="bg-grey-200 mt-4 p-2 h-32" />
 					</div>
 					<div className="text-right">
 						<input
