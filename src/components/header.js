@@ -4,7 +4,7 @@ import { Menu, MenuList, MenuItem, MenuButton, MenuLink } from '@reach/menu-butt
 import VisuallyHidden from '@reach/visually-hidden';
 
 import { Image } from './images';
-import { ContactIcon, TwitterIcon, InstagramIcon, FacebookIcon } from './icons';
+import { ContactIcon, InstagramIcon, FacebookIcon } from './icons';
 
 function useWindowWidth() {
 	if (typeof window != 'undefined') {
@@ -48,10 +48,7 @@ const MobileMenu = () => (
 					<MenuLink as={Link} to="/" className="font-bold text-lg hover:underline p-4 inline-block mr-12">
 						Contact Us
 					</MenuLink>
-					<MenuItem className="h-6 flex items-center mt-12" onSelect={() => {}}>
-						<a as={Link} className="block px-4 h-full w-auto hover:text-twitter" href="/">
-							<TwitterIcon className="h-full w-auto" />
-						</a>
+					<MenuItem className="h-5 flex items-center mt-12" onSelect={() => {}}>
 						<a as={Link} className="block px-4 h-full w-auto hover:text-instagram" href="/">
 							<InstagramIcon className="h-full w-auto" />
 						</a>

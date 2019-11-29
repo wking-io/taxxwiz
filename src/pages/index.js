@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import VisuallyHidden from '@reach/visually-hidden';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -111,6 +112,12 @@ const IndexPage = () => {
 					data-event-action="Submitted Application"
 					data-event-label="Hiring Form"
 				>
+					<input type="hidden" name="form-name" value="hiring" />
+					<VisuallyHidden>
+						<label>
+							Don’t fill this out if you're human: <input name="bot-field" />
+						</label>
+					</VisuallyHidden>
 					<div className="flex flex-col md:flex-row">
 						<div className="flex flex-col flex-1 m-0 md:mr-6">
 							<label htmlFor="name" className="font-bold text-sm lg:text-base">
