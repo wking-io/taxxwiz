@@ -6,6 +6,32 @@ import SEO from '../components/seo';
 import { Image } from '../components/images';
 import { ArrowIcon, InstagramIcon, FacebookIcon } from '../components/icons';
 
+const AvailabilityField = () => (
+	<div className="flex flex-col flex-1 mt-8">
+		<label htmlFor="availability" className="font-bold text-sm lg:text-base">
+			What times would you be available to work?
+		</label>
+		<div className="select mt-4 relative">
+			<select
+				className="bg-grey-200 appearance-none w-full p-2"
+				name="Availability"
+				defaultValue="No Answer"
+				id="availability"
+			>
+				<option value="No Answer">Make a selection...</option>
+				<option value="Morning">Morning (8 AM - 12 AM)</option>
+				<option value="Evening">Evening (12 PM - 5 PM)</option>
+				<option value="Night">Night (6 PM - 11 PM)</option>
+				<option value="Full Early">Full (8 AM - 5 PM)</option>
+				<option value="Full Late">Full (1 PM - 10 PM)</option>
+			</select>
+			<div className="absolute right-0 top-0 h-full px-4 flex items-center justify-center pointer-events-none">
+				<ArrowIcon className="text-grey-500 w-auto h-4" direction="down" />
+			</div>
+		</div>
+	</div>
+);
+
 const IndexPage = () => {
 	const [ showField, updateShowField ] = useState(false);
 	return (
@@ -242,30 +268,12 @@ const IndexPage = () => {
 						</div>
 					</div>
 					{showField ? (
-						<div className="flex flex-col flex-1 mt-8">
-							<label htmlFor="availability" className="font-bold text-sm lg:text-base">
-								What times would you be available to work?
-							</label>
-							<div className="select mt-4 relative">
-								<select
-									className="bg-grey-200 appearance-none w-full p-2"
-									name="Availability"
-									defaultValue="No Answer"
-									id="availability"
-								>
-									<option value="No Answer">Make a selection...</option>
-									<option value="Morning">Morning (8 AM - 12 AM)</option>
-									<option value="Evening">Evening (12 PM - 5 PM)</option>
-									<option value="Night">Night (6 PM - 11 PM)</option>
-									<option value="Full Early">Full (8 AM - 5 PM)</option>
-									<option value="Full Late">Full (1 PM - 10 PM)</option>
-								</select>
-								<div className="absolute right-0 top-0 h-full px-4 flex items-center justify-center pointer-events-none">
-									<ArrowIcon className="text-grey-500 w-auto h-4" direction="down" />
-								</div>
-							</div>
-						</div>
-					) : null}
+						<AvailabilityField />
+					) : (
+						<VisuallyHidden>
+							<AvailabilityField />
+						</VisuallyHidden>
+					)}
 					<div className="flex flex-col flex-1 mt-8">
 						<label htmlFor="experience" className="font-bold text-sm lg:text-base">
 							How many years of experience?
