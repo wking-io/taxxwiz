@@ -67,7 +67,7 @@ const ContactPage = () => {
 						dark
 					/>
 				</div>
-				<div className="flex-1 px-16 lg:p-0">
+				<div className="flex flex-col flex-1 px-16 lg:p-0">
 					<Textarea name="message" label="Message" value={message} update={updateMessage} dark />
 					<input
 						type="submit"

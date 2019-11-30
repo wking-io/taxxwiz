@@ -16,7 +16,7 @@ export const Field = ({ name, label, value, placeholder, update }) => (
 );
 
 export const Textarea = ({ name, label, value, update }) => (
-	<div className="flex flex-col lg:border-l border-grey-400 pb-16 lg:p-16">
+	<div className="flex-1 flex flex-col lg:border-l border-grey-400 pb-16 lg:p-16">
 		<label className="mb-4 text-grey-600" htmlFor={name}>
 			{label}
 		</label>
