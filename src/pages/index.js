@@ -62,7 +62,7 @@ const IndexPage = () => {
 				</div>
 				<div className="w-16 bg-white" />
 			</section>
-			<section className="py-32 bg-white">
+			<section className="pt-32 pb-48 bg-white">
 				<div className="w-5/6 max-w-4xl mx-auto">
 					<div className="flex justify-between items-center">
 						<Image
