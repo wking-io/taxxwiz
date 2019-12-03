@@ -66,7 +66,7 @@ const IndexPage = () => {
 				<div className="w-5/6 max-w-4xl mx-auto">
 					<div className="flex justify-between items-center">
 						<Image
-							image="feature"
+							image="pay"
 							className="w-2/5 h-auto flex-shrink-0 mr-8"
 							imgStyle={{ width: '100%', height: 'auto' }}
 						/>
