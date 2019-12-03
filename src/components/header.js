@@ -7,19 +7,16 @@ import { Image } from './images';
 import { ContactIcon, InstagramIcon, FacebookIcon } from './icons';
 
 function useWindowWidth() {
-	if (typeof window != 'undefined') {
-		const [ isMobile, setSize ] = useState(window.innerWidth < 768);
+	const [ isMobile, setSize ] = useState(typeof window != 'undefined' && window.innerWidth < 768);
 
-		useEffect(() => {
-			const handleResize = () => setSize(window.innerWidth < 768);
-			window.addEventListener('resize', handleResize);
-			return () => {
-				window.removeEventListener('resize', handleResize);
-			};
-		});
-		return isMobile;
-	}
-	return false;
+	useEffect(() => {
+		const handleResize = () => setSize(typeof window != 'undefined' && window.innerWidth < 768);
+		window.addEventListener('resize', handleResize);
+		return () => {
+			window.removeEventListener('resize', handleResize);
+		};
+	});
+	return isMobile;
 }
 
 const MobileMenu = () => (
@@ -79,7 +76,7 @@ const DesktopMenu = () => (
 const Header = ({ label }) => {
 	const isMobile = useWindowWidth();
 	return (
-		<header className="flex items-center w-full px-8 md:px-16 mt-2 md:mt-8">
+		<header className="flex items-center w-full px-8 md:px-16 pt-2 md:pt-8 pb-4 bg-white">
 			<a
 				className="block relative z-50"
 				href="http://mytaxxwiz.com/"
