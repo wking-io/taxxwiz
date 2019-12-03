@@ -5,7 +5,7 @@ module.exports = {
     titleTemplate: "%s | TaxxWiz",
     description:
       "Time for your taxes to start paying you.",
-    siteUrl: "https://www.mytaxxwiz.com",
+    siteUrl: "https://hiring.mytaxxwiz.com",
     image: {
       src: "/images/favicon.png",
       alt: "TaxxWiz Logo",
