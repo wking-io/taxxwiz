@@ -56,7 +56,7 @@ const SEO = ({ title, description, image, pathname, article }) => (
             {seo.title && (
               <meta
                 name="twitter:title"
-                content="There is a difference in mortgage companies"
+                content={seo.title}
               />
             )}
             {seo.description && (
