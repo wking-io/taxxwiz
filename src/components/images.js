@@ -40,6 +40,13 @@ export const Image = ({ image, ...props }) => {
 					}
 				}
 			}
+			taxxpro: file(relativePath: { eq: "images/tax-pro.png" }) {
+				childImageSharp {
+					fluid(maxWidth: 800) {
+						...GatsbyImageSharpFluid_withWebp
+					}
+				}
+			}
 		}
 	`);
 

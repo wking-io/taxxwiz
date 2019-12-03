@@ -80,7 +80,7 @@ const IndexPage = () => {
 					</div>
 					<div className="flex flex-row-reverse justify-between items-center mt-12">
 						<Image
-							image="feature"
+							image="taxxpro"
 							className="w-2/5 h-auto flex-shrink-0 ml-8"
 							imgStyle={{ width: '100%', height: 'auto' }}
 						/>
