@@ -39,7 +39,7 @@ const SEO = ({ title, description, image, pathname, article }) => (
             {seo.title && (
               <meta
                 property="og:title"
-                content="There is a difference in mortgage companies"
+                content={seo.title}
               />
             )}
             {seo.description && (
@@ -49,14 +49,14 @@ const SEO = ({ title, description, image, pathname, article }) => (
             <meta property="og:image:width" content={seo.image.width} />
             <meta property="og:image:height" content={seo.image.height} />
             <meta property="og:image:alt" content={seo.image.alt} />
-            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:card" content="summary" />
             {twitterUsername && (
               <meta name="twitter:creator" content={twitterUsername} />
             )}
             {seo.title && (
               <meta
                 name="twitter:title"
-                content="There is a difference in mortgage companies"
+                content={seo.title}
               />
             )}
             {seo.description && (
