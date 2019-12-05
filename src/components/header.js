@@ -7,19 +7,16 @@ import { Image } from './images';
 import { ContactIcon, InstagramIcon, FacebookIcon } from './icons';
 
 function useWindowWidth() {
-	if (typeof window != 'undefined') {
-		const [ isMobile, setSize ] = useState(window.innerWidth < 768);
+	const [ isMobile, setSize ] = useState(typeof window != 'undefined' && window.innerWidth < 768);
 
-		useEffect(() => {
-			const handleResize = () => setSize(window.innerWidth < 768);
-			window.addEventListener('resize', handleResize);
-			return () => {
-				window.removeEventListener('resize', handleResize);
-			};
-		});
-		return isMobile;
-	}
-	return false;
+	useEffect(() => {
+		const handleResize = () => setSize(typeof window != 'undefined' && window.innerWidth < 768);
+		window.addEventListener('resize', handleResize);
+		return () => {
+			window.removeEventListener('resize', handleResize);
+		};
+	});
+	return isMobile;
 }
 
 const MobileMenu = () => (
