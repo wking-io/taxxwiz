@@ -61,7 +61,7 @@ const ContactPage = () => {
 					<Field
 						name="email"
 						label="Email Address"
-						placeholder="Write name here..."
+						placeholder="Write email address here..."
 						value={email}
 						update={updateEmail}
 						dark
