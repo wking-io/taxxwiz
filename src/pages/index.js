@@ -123,8 +123,100 @@ const IndexPage = () => {
 				</div>
 				<div />
 			</section>
-			<section id="application" className="w-5/6 max-w-3xl mx-auto mt-64 md:mt-48">
-				<h2 className="text-3xl md:text-5xl font-bold tracking-tight">Application Form.</h2>
+			<section id="application" className="w-5/6 max-w-4xl mx-auto mt-64 md:mt-48">
+				<h2 className="text-3xl md:text-5xl font-bold tracking-tight md:pt-20 lg:pt-0">Job Descriptions.</h2>
+				<ul className="flex flex-col lg:flex-row flex-wrap lg:-mx-6">
+					<li className="mt-12 description">
+						<h3 className="uppercase font-bold text-xl text-primary">Taxx Wizard</h3>
+						<div className="leading-relaxed">
+							<p className="mt-4">
+								As a Taxx Wizard you will be operating as a contractor under the umbrella of Taxx Wiz.
+								Essentially running and operating your own business. As a wizard you will be responsible
+								for establishing clients, building relationships with these clients, and learning some
+								of the ins and outs of tax law to help benefit the clients you gain. This position will
+								require good organizational skills, interpersonal skills, and the ability to communicate
+								information at a fast pace.
+							</p>
+							<p className="mt-4">
+								This position is also remote based, so potential applicants will need access to a
+								computer and the internet, as well as a mobile device with Apple iOS or Android. You
+								will be required to attend several online training sessions leading up to the beginning
+								of the tax season.
+							</p>
+						</div>
+					</li>
+					<li className="mt-12 description">
+						<h3 className="uppercase font-bold text-xl text-primary">Taxx Preparer</h3>
+						<div className="leading-relaxed">
+							<p className="mt-4">
+								Our preparer position is based on hourly work. We are looking for someone who has some
+								knowledge or background in preparing taxes, or someone who has the propensity to learn
+								common tax preparation practices. This position will require someone who is goal
+								oriented, pays close attention to details, and is thorough with their work.
+							</p>
+							<p className="mt-4">
+								This position is also remote based, so potential applicants will need access to a
+								computer and the internet, as well as a mobile device with Apple iOS or Android. You
+								will be required to attend several online training sessions leading up to the beginning
+								of the tax season.
+							</p>
+						</div>
+					</li>
+					<li className="mt-12 description">
+						<h3 className="uppercase font-bold text-xl text-primary">Taxx Lawyer</h3>
+						<div className="leading-relaxed">
+							<p className="mt-4">
+								Taxx Lawyer is based on hourly work. This position requires someone who understands
+								legal issues and can keep confidential records and tax information for clients. This
+								position will also require the candidate to understand finance and accounting
+								principles, and must be able to communicate with both the state and government in
+								regards to evaluating and assessing complicated tax issues.
+							</p>
+							<p className="mt-4">
+								This position is also remote based, so potential applicants will need access to a
+								computer and the internet, as well as a mobile device with Apple iOS or Android. You
+								will be required to attend several online training sessions leading up to the beginning
+								of the tax season.
+							</p>
+						</div>
+					</li>
+					<li className="mt-12 description">
+						<h3 className="uppercase font-bold text-xl text-primary">CPA</h3>
+						<div className="leading-relaxed">
+							<p className="mt-4">
+								A CPA with Taxxwiz is based on hourly work. We are requesting that this candidate
+								supports all Taxxwiz business clients with tax and financial statement planning. This
+								will include but is not limited to studying financial records, preparing tax forms, and
+								overseeing audits. Candidate must have an accounting degree and a CPA certification.
+							</p>
+							<p className="mt-4">
+								This position is also remote based, so potential applicants will need access to a
+								computer and the internet, as well as a mobile device with Apple iOS or Android. You
+								will be required to attend several online training sessions leading up to the beginning
+								of the tax season.
+							</p>
+						</div>
+					</li>
+					<li className="mt-12 lg:mx-6">
+						<h3 className="uppercase font-bold text-xl text-primary">Potential Franchisee</h3>
+						<div className="leading-relaxed">
+							<p className="mt-4">
+								Interested in being your own business owner? Apply to this position to get more
+								information about how you can start your own tax company!
+							</p>
+							<p className="mt-4">
+								Confidentiality Notice: This transmission (including any attachments) may contain
+								confidential information belonging to the sender and is intended only for the use of the
+								party or entity to which it is addressed. If you are not the intended recipient, you are
+								hereby notified that any disclosure, copying, distribution, retention or the taking of
+								action in reliance on the contents of this transmission is strictly prohibited. If you
+								have received this transmission in error, please immediately notify the sender and erase
+								all information and attachments.
+							</p>
+						</div>
+					</li>
+				</ul>
+				<h2 className="text-3xl md:text-5xl font-bold tracking-tight mt-20">Application Form.</h2>
 				<div className="mt-4 md:mt-12 h-1 w-32 bg-primary" />
 				<form
 					className="mt-12 pb-32"
