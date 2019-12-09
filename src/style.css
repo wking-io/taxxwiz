@@ -195,6 +195,13 @@ html {
 	height: 90vw;
 }
 
+@screen md {
+	.product-detail {
+		@apply mx-4;
+		width: calc((100% / 3) - theme('spacing.8'));
+	}
+}
+
 @screen lg {
 	.hiring-image {
 		height: auto;

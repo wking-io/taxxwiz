@@ -62,7 +62,7 @@ const IndexPage = () => {
 				</div>
 				<div className="w-16 bg-white" />
 			</section>
-			<section className="pt-32 pb-48 bg-white">
+			<section className="py-32 bg-white">
 				<div className="w-5/6 max-w-4xl mx-auto">
 					<div className="flex justify-between items-center">
 						<Image
@@ -72,13 +72,13 @@ const IndexPage = () => {
 						/>
 						<div className="flex-1">
 							<h3 className="text-4xl font-bold tracking-tight mb-4">You only pay if you save</h3>
-							<p className="text-grey-500">
+							<p className="text-grey-500 leading-relaxed">
 								Taxx Wiz is a company that partners with individuals and small businesses alike to offer
 								strong Tax Preparation Services, book keeping, financial, and accounting services.
 							</p>
 						</div>
 					</div>
-					<div className="flex flex-row-reverse justify-between items-center mt-12">
+					<div className="flex flex-row-reverse justify-between items-center mt-8">
 						<Image
 							image="taxxpro"
 							className="w-2/5 h-auto flex-shrink-0 ml-8"
@@ -86,13 +86,13 @@ const IndexPage = () => {
 						/>
 						<div className="flex-1">
 							<h3 className="text-4xl font-bold tracking-tight mb-4">Prepared by a professional</h3>
-							<p className="text-grey-500">
+							<p className="text-grey-500 leading-relaxed">
 								Taxx Wiz is a company that partners with individuals and small businesses alike to offer
 								strong Tax Preparation Services, book keeping, financial, and accounting services.
 							</p>
 						</div>
 					</div>
-					<div className="flex justify-between items-center mt-12">
+					<div className="flex justify-between items-center mt-8">
 						<Image
 							image="feature"
 							className="w-2/5 h-auto flex-shrink-0 mr-8"
@@ -100,12 +100,61 @@ const IndexPage = () => {
 						/>
 						<div className="flex-1">
 							<h3 className="text-4xl font-bold tracking-tight mb-4">Never miss a dollar</h3>
-							<p className="text-grey-500">
+							<p className="text-grey-500 leading-relaxed">
 								Taxx Wiz is a company that partners with individuals and small businesses alike to offer
 								strong Tax Preparation Services, book keeping, financial, and accounting services.
 							</p>
 						</div>
 					</div>
+				</div>
+			</section>
+			<section className="bg-white pb-48">
+				<div className="w-5/6 max-w-4xl mx-auto">
+					<div className="flex items-center">
+						<div className="md:mr-8">
+							<h3 className="text-4xl font-bold tracking-tight mb-4">Simple yet powerful</h3>
+							<p className="text-grey-500 leading-relaxed">
+								The intuitive interface allows you to be more productive and saves you time during tax
+								season. Above all, it provides you a fast and secure way to save money on all of your
+								taxes this season.
+							</p>
+							<p className="text-grey-500 leading-relaxed mt-6">
+								Our Dashboard is 10 years in the making and continuously getting better. You can trust
+								us and TaxxWiz to get you the biggest saving you have seen.
+							</p>
+						</div>
+						<Image
+							image="laptop"
+							className="w-1/2 h-auto flex-shrink-0 ml-8"
+							imgStyle={{ width: '100%', height: 'auto' }}
+						/>
+					</div>
+					<ul className="flex -mx-4 mt-12">
+						<li className="product-detail">
+							<h4 className="uppercase font-bold text-lg">Security</h4>
+							<p className="text-grey-500 leading-relaxed mt-4">
+								The intuitive interface allows you to be more productive and saves you time during tax
+								season. Above all, it provides you a fast and secure way to save money on all of your
+								taxes this season.
+							</p>
+						</li>
+						<li className="product-detail">
+							<h4 className="uppercase font-bold text-lg">Powerful Reporting</h4>
+							<p className="text-grey-500 leading-relaxed mt-4">
+								The intuitive interface allows you to be more productive and saves you time during tax
+								season. Above all, it provides you a fast and secure way to save money on all of your
+								taxes this season.
+							</p>
+						</li>
+						<li className="product-detail">
+							<h4 className="uppercase font-bold text-lg">Supplies</h4>
+							<p className="text-grey-500 leading-relaxed mt-4">
+								The intuitive interface allows you to be more productive and saves you time during tax
+								season. Above all, it provides you a fast and secure way to save money on all of your
+								taxes this season.
+							</p>
+						</li>
+					</ul>
 				</div>
 			</section>
 			<section className="bg-white pb-32">

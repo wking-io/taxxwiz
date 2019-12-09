@@ -47,6 +47,13 @@ export const Image = ({ image, ...props }) => {
 					}
 				}
 			}
+			laptop: file(relativePath: { eq: "images/laptop.png" }) {
+				childImageSharp {
+					fluid(maxWidth: 800) {
+						...GatsbyImageSharpFluid_withWebp
+					}
+				}
+			}
 		}
 	`);
 
