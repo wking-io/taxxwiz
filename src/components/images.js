@@ -54,6 +54,13 @@ export const Image = ({ image, ...props }) => {
 					}
 				}
 			}
+			efile: file(relativePath: { eq: "images/efile.png" }) {
+				childImageSharp {
+					fluid(maxWidth: 400) {
+						...GatsbyImageSharpFluid_withWebp
+					}
+				}
+			}
 		}
 	`);
 
