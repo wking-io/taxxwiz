@@ -21,35 +21,35 @@ const IndexPage = () => {
         muted="true"
       />
       <section className="flex">
-        <div className="flex-1 aspect-16:9">
-          <div className="video-overlay-dark aspect-content flex items-end justify-between pl-24 pr-16">
-            <div className="w-5/6 pb-48">
-              <h2 className="text-white text-6xl font-bold tracking-tight leading-none">
+        <div className="flex-1 lg:aspect-16:9">
+          <div className="video-overlay-dark min-h-screen lg:aspect-content flex flex-col justify-end lg:flex-row lg:items-end lg:justify-between p-8 lg:py-0 lg:pl-24 lg:pr-16">
+            <div className="flex flex-col justify-end lg:justify-start w-full lg:w-5/6 flex-1 pb-16 lg:pb-48">
+              <h2 className="text-white text-3xl md:text-4xl xl:text-6xl font-bold tracking-tight leading-none">
                 <span className="text-primary">Get more money</span> on your taxes this year without ever leaving your
                 house.
               </h2>
-              <div className="mt-16">
+              <div className="mt-16 flex flex-col md:flex-row items-start md:items-center">
                 <a
-                  className="inline-block px-8 py-4 bg-primary hover:bg-primary-dark text-lg font-bold uppercase text-white tracking-tight"
+                  className="px-8 py-3 md:py-4 bg-primary hover:bg-primary-dark text-base md:text-lg font-bold uppercase text-white tracking-tight"
                   href="https://google.com"
                 >
                   Start Saving Now
                 </a>
                 <a
-                  className="inline-block px-8 py-4 underline hover:no-underline text-lg font-bold text-white tracking-tight"
+                  className="mt-8 md:ml-8 md:mt-0 underline hover:no-underline text-base md:text-lg font-bold text-white tracking-tight"
                   href="https://google.com"
                 >
                   Want to learn more? Contact us now
                 </a>
               </div>
             </div>
-            <ul className="flex flex-col items-center justify-end pb-16">
-              <li className="mb-8 h-4">
+            <ul className="flex flex-row lg:flex-col items-center justify-start lg:justify-end pb-6 lg:pb-16">
+              <li className="h-4">
                 <a className="text-white hover:text-instagram" href="https://www.instagram.com/taxxwiz/?hl=en">
                   <InstagramIcon className="h-full w-auto" />
                 </a>
               </li>
-              <li className="h-4">
+              <li className="ml-8 lg:ml-0 lg:mt-8 h-4">
                 <a className="text-white hover:text-facebook" href="https://www.facebook.com/taxxwiz/">
                   <FacebookIcon className="h-full w-auto" />
                 </a>
@@ -57,18 +57,18 @@ const IndexPage = () => {
             </ul>
           </div>
         </div>
-        <div className="w-16 bg-white" />
+        <div className="hidden lg:block w-16 bg-white" />
       </section>
       <section className="py-32 bg-white">
         <div className="w-5/6 max-w-4xl mx-auto">
-          <div className="flex justify-between items-center">
+          <div className="flex flex-col md:flex-row justify-between md:items-center">
             <Image
               image="pay"
-              className="w-2/5 h-auto flex-shrink-0 mr-8"
+              className="w-full md:w-2/5 h-auto flex-shrink-0 md:mr-8"
               imgStyle={{ width: '100%', height: 'auto' }}
             />
             <div className="flex-1">
-              <h3 className="text-4xl font-bold tracking-tight mb-4">Easy and Simple</h3>
+              <h3 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">Easy and Simple</h3>
               <p className="text-grey-500 leading-relaxed">
                 With our mobile app it has never been easier to do your taxes. You submit your documents and information
                 from the comfort of your couch. You can chat with our tax professionals while drinking your morning
@@ -76,28 +76,28 @@ const IndexPage = () => {
               </p>
             </div>
           </div>
-          <div className="flex flex-row-reverse justify-between items-center mt-8">
+          <div className="flex flex-col md:flex-row-reverse justify-between md:items-center mt-16 md:mt-8">
             <Image
               image="taxxpro"
-              className="w-2/5 h-auto flex-shrink-0 ml-8"
+              className="w-full md:w-2/5 h-auto flex-shrink-0 md:ml-8"
               imgStyle={{ width: '100%', height: 'auto' }}
             />
             <div className="flex-1">
-              <h3 className="text-4xl font-bold tracking-tight mb-4">Fast and Secure</h3>
+              <h3 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">Fast and Secure</h3>
               <p className="text-grey-500 leading-relaxed">
                 Protecting your information is our priority. That is why we offer our secure portal to keep your
                 documents safe, and delivered directly to our Preparers who can prepare your return in real time.
               </p>
             </div>
           </div>
-          <div className="flex justify-between items-center mt-8">
+          <div className="flex flex-col md:flex-row justify-between md:items-center mt-16 md:mt-8">
             <Image
-              image="feature"
-              className="w-2/5 h-auto flex-shrink-0 mr-8"
+              image="taxxpro"
+              className="w-full md:w-2/5 h-auto flex-shrink-0 md:mr-8"
               imgStyle={{ width: '100%', height: 'auto' }}
             />
             <div className="flex-1">
-              <h3 className="text-4xl font-bold tracking-tight mb-4">Get you biggest refund</h3>
+              <h3 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">Get your biggest refund</h3>
               <p className="text-grey-500 leading-relaxed">
                 Our licensed preparers and CPAs are committed to getting you the biggest and most accurate return for
                 this tax season. Once they maximize your return just approve it, sit back, relax, and get your biggest
@@ -109,8 +109,8 @@ const IndexPage = () => {
       </section>
       <section className="bg-white pb-48">
         <div className="w-5/6 max-w-4xl mx-auto">
-          <div className="flex items-center">
-            <div className="md:mr-8">
+          <div className="flex flex-col-reverse md:flex-row items-center">
+            <div className="mt-8 md:mt-0 md:mr-8">
               <h3 className="text-4xl font-bold tracking-tight mb-4">About us</h3>
               <p className="text-grey-500 leading-relaxed">
                 Taxx Wiz is a company that partners with individuals and small businesses alike to offer strong tax
@@ -122,11 +122,11 @@ const IndexPage = () => {
             </div>
             <Image
               image="laptop"
-              className="w-1/2 h-auto flex-shrink-0 ml-8"
+              className="w-full md:w-1/2 h-auto flex-shrink-0 md:ml-8"
               imgStyle={{ width: '100%', height: 'auto' }}
             />
           </div>
-          <ul className="flex -mx-4 mt-12">
+          <ul className="flex flex-col md:flex-row md:-mx-4 mt-12">
             <li className="product-detail">
               <h4 className="uppercase font-bold text-lg">Our Philosophy</h4>
               <p className="text-grey-500 leading-relaxed mt-4">
@@ -135,7 +135,7 @@ const IndexPage = () => {
                 owners to have a reliable resource for financial needs and services.
               </p>
             </li>
-            <li className="product-detail">
+            <li className="product-detail mt-8 md:mt-0">
               <h4 className="uppercase font-bold text-lg">Be Apart Of Our Family</h4>
               <p className="text-grey-500 leading-relaxed mt-4">
                 Our team prides itself in its family atmosphere, which helps us take pride in our work and our clients.
