@@ -33,14 +33,21 @@ export const Image = ({ image, ...props }) => {
           }
         }
       }
-      pay: file(relativePath: { eq: "images/pay-if-you-save.png" }) {
+      easy: file(relativePath: { eq: "images/easy-simple.png" }) {
         childImageSharp {
           fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
-      taxxpro: file(relativePath: { eq: "images/tax-pro.png" }) {
+      refund: file(relativePath: { eq: "images/refund.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      fast: file(relativePath: { eq: "images/fast-secure.png" }) {
         childImageSharp {
           fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid_withWebp
@@ -54,7 +61,7 @@ export const Image = ({ image, ...props }) => {
           }
         }
       }
-      efile: file(relativePath: { eq: "images/efile.jpg" }) {
+      efile: file(relativePath: { eq: "images/efile.png" }) {
         childImageSharp {
           fluid(maxWidth: 400) {
             ...GatsbyImageSharpFluid_withWebp

@@ -10,7 +10,7 @@ import { Image } from '../components/images';
 const IndexPage = () => {
   return (
     <Layout label="Hiring">
-      <SEO />
+      <SEO title="Easy online tax returns without leaving your home" />
       <Video
         className="object-cover top-0 w-full h-screen fixed"
         style={{ zIndex: '-1' }}
@@ -22,7 +22,7 @@ const IndexPage = () => {
       />
       <section className="flex">
         <div className="flex-1 lg:aspect-16:9">
-          <div className="video-overlay-dark min-h-screen lg:aspect-content flex flex-col justify-end lg:flex-row lg:items-end lg:justify-between p-8 lg:py-0 lg:pl-24 lg:pr-16">
+          <div className="video-overlay-dark min-h-screen lg:min-h-full lg:aspect-content flex flex-col justify-end lg:flex-row lg:items-end lg:justify-between p-8 lg:py-0 lg:pl-24 lg:pr-16">
             <div className="flex flex-col justify-end lg:justify-start w-full lg:w-5/6 flex-1 pb-16 lg:pb-48">
               <h2 className="text-white text-3xl md:text-4xl xl:text-6xl font-bold tracking-tight leading-none">
                 <span className="text-primary">Get more money</span> on your taxes this year without ever leaving your
@@ -63,8 +63,8 @@ const IndexPage = () => {
         <div className="w-5/6 max-w-4xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between md:items-center">
             <Image
-              image="pay"
-              className="w-full md:w-2/5 h-auto flex-shrink-0 md:mr-8"
+              image="easy"
+              className="w-full md:w-2/5 h-auto flex-shrink-0 md:mr-16"
               imgStyle={{ width: '100%', height: 'auto' }}
             />
             <div className="flex-1">
@@ -76,10 +76,10 @@ const IndexPage = () => {
               </p>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row-reverse justify-between md:items-center mt-16 md:mt-8">
+          <div className="flex flex-col md:flex-row-reverse justify-between md:items-center mt-12">
             <Image
-              image="taxxpro"
-              className="w-full md:w-2/5 h-auto flex-shrink-0 md:ml-8"
+              image="fast"
+              className="w-full md:w-2/5 h-auto flex-shrink-0 md:ml-16"
               imgStyle={{ width: '100%', height: 'auto' }}
             />
             <div className="flex-1">
@@ -90,10 +90,10 @@ const IndexPage = () => {
               </p>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row justify-between md:items-center mt-16 md:mt-8">
+          <div className="flex flex-col md:flex-row justify-between md:items-center mt-12">
             <Image
-              image="taxxpro"
-              className="w-full md:w-2/5 h-auto flex-shrink-0 md:mr-8"
+              image="refund"
+              className="w-full md:w-2/5 h-auto flex-shrink-0 md:mr-16"
               imgStyle={{ width: '100%', height: 'auto' }}
             />
             <div className="flex-1">
@@ -121,7 +121,7 @@ const IndexPage = () => {
               </p>
             </div>
             <Image
-              image="laptop"
+              image="feature"
               className="w-full md:w-1/2 h-auto flex-shrink-0 md:ml-8"
               imgStyle={{ width: '100%', height: 'auto' }}
             />
