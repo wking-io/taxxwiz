@@ -19,10 +19,11 @@ const IndexPage = () => {
         loop="true"
         autoplay="true"
         muted="true"
+        secure="true"
       />
-      <section className="flex">
+      <section className="flex hero">
         <div className="flex-1 lg:aspect-16:9">
-          <div className="video-overlay-dark min-h-screen lg:min-h-full lg:aspect-content flex flex-col justify-end lg:flex-row lg:items-end lg:justify-between p-8 lg:py-0 lg:pl-24 lg:pr-16">
+          <div className="video-overlay-dark h-full lg:aspect-content flex flex-col justify-end lg:flex-row lg:items-end lg:justify-between p-8 lg:py-0 lg:pl-24 lg:pr-16">
             <div className="flex flex-col justify-end lg:justify-start w-full lg:w-5/6 flex-1 pb-16 lg:pb-48">
               <h2 className="text-white text-3xl md:text-4xl xl:text-6xl font-bold tracking-tight leading-none">
                 <span className="text-primary">Get more money</span> on your taxes this year without ever leaving your
@@ -67,7 +68,7 @@ const IndexPage = () => {
               className="w-full md:w-2/5 h-auto flex-shrink-0 md:mr-16"
               imgStyle={{ width: '100%', height: 'auto' }}
             />
-            <div className="flex-1">
+            <div className="flex-1 mt-8 md:mt-0">
               <h3 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">Easy and Simple</h3>
               <p className="text-grey-500 leading-relaxed">
                 With our mobile app it has never been easier to do your taxes. You submit your documents and information
@@ -82,7 +83,7 @@ const IndexPage = () => {
               className="w-full md:w-2/5 h-auto flex-shrink-0 md:ml-16"
               imgStyle={{ width: '100%', height: 'auto' }}
             />
-            <div className="flex-1">
+            <div className="flex-1 mt-8 md:mt-0">
               <h3 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">Fast and Secure</h3>
               <p className="text-grey-500 leading-relaxed">
                 Protecting your information is our priority. That is why we offer our secure portal to keep your
@@ -96,7 +97,7 @@ const IndexPage = () => {
               className="w-full md:w-2/5 h-auto flex-shrink-0 md:mr-16"
               imgStyle={{ width: '100%', height: 'auto' }}
             />
-            <div className="flex-1">
+            <div className="flex-1 mt-8 md:mt-0">
               <h3 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">Get your biggest refund</h3>
               <p className="text-grey-500 leading-relaxed">
                 Our licensed preparers and CPAs are committed to getting you the biggest and most accurate return for
@@ -148,63 +149,44 @@ const IndexPage = () => {
       </section>
       <section className="bg-white pb-32">
         <div className="w-5/6 max-w-6xl mx-auto relative testimonial">
-          <h3 className="relative z-10 flex flex-col items-start text-5xl tracking-tight leading-none font-bold -ml-12 -mt-12">
-            <span className="bg-white py-1 px-2">Don't take our word.</span>
-            <span className="bg-white py-1 px-2">
+          <h3 className="relative z-10 flex flex-col items-start text-2xl sm:text-3xl md:text-5xl tracking-tight leading-none font-bold md:-ml-12 -mt-12 w-11/12 sm:w-full">
+            <span className="bg-white p-4 pb-1 md:py-1 md:px-2">Don't take our word.</span>
+            <span className="bg-white p-4 pt-0 md:py-1 md:px-2">
               Hear from <span className="text-primary">happy customers</span>.
             </span>
           </h3>
-          <ul className="relative flex flex-wrap -mt-8 pb-12 px-24 grid">
+          <ul className="relative flex flex-wrap -mt-8 pb-8 md:pb-12 px-16 md:px-24 grid">
             <li className="grid-item">
               <blockquote>
                 <QuoteIcon className="text-grey-300 h-12 pb-1 w-auto" />
                 <p className="text-grey-700 leading-relaxed mt-6">
-                  TaxxWiz saved me $1,070 on my taxes this year that I would have never found on my own. I will
-                  definitely be using them next year and every year after.
+                  This was the easiest tax process I’ve ever experienced. I am never going to anyone else for my taxes.
                 </p>
                 <div className="h-px bg-grey-300 w-24 mt-4" />
-                <cite className="not-italic text-lg font-bold mt-4 block">
-                  Jared Banks saved <span className="text-primary">$1,234</span>
-                </cite>
+                <cite className="not-italic text-lg font-bold mt-4 block">Alicia</cite>
               </blockquote>
             </li>
             <li className="grid-item">
               <blockquote>
                 <QuoteIcon className="text-grey-300 h-12 pb-1 w-auto" />
                 <p className="text-grey-700 leading-relaxed mt-6">
-                  TaxxWiz saved me $1,070 on my taxes this year that I would have never found on my own. I will
-                  definitely be using them next year and every year after.
+                  Filing my taxes in the past has always been long and stressful, after working with Justin it turned
+                  out to be a breeze!
                 </p>
                 <div className="h-px bg-grey-300 w-24 mt-4" />
-                <cite className="not-italic text-lg font-bold mt-4 block">
-                  Jared Banks saved <span className="text-primary">$1,234</span>
-                </cite>
+                <cite className="not-italic text-lg font-bold mt-4 block">Justin Keys</cite>
               </blockquote>
             </li>
             <li className="grid-item">
               <blockquote>
                 <QuoteIcon className="text-grey-300 h-12 pb-1 w-auto" />
                 <p className="text-grey-700 leading-relaxed mt-6">
-                  TaxxWiz saved me $1,070 on my taxes this year that I would have never found on my own. I will
-                  definitely be using them next year and every year after.
+                  So for the first time I decided to let someone else do my taxes, and I chose Taxx Wiz and oh my god I
+                  don't regret it one bit. The process was easy, I got the max refund, and it was just less stressful on
+                  my end.”
                 </p>
                 <div className="h-px bg-grey-300 w-24 mt-4" />
-                <cite className="not-italic text-lg font-bold mt-4 block">
-                  Jared Banks saved <span className="text-primary">$1,234</span>
-                </cite>
-              </blockquote>
-            </li>
-            <li className="grid-item">
-              <blockquote>
-                <QuoteIcon className="text-grey-300 h-12 pb-1 w-auto" />
-                <p className="text-grey-700 leading-relaxed mt-6">
-                  TaxxWiz saved me $1,070 on my taxes this year that I would have never found on my own. I will
-                  definitely be using them next year and every year after.
-                </p>
-                <div className="h-px bg-grey-300 w-24 mt-4" />
-                <cite className="not-italic text-lg font-bold mt-4 block">
-                  Jared Banks saved <span className="text-primary">$1,234</span>
-                </cite>
+                <cite className="not-italic text-lg font-bold mt-4 block">Nisha Morrison</cite>
               </blockquote>
             </li>
           </ul>
@@ -220,11 +202,11 @@ const IndexPage = () => {
       </section>
       <section className="final">
         <div className="w-5/6 pt-40 pb-8 max-w-5xl mx-auto text-center flex flex-col items-center justify-center">
-          <h3 className="text-5xl text-center text-white font-bold tracking-tight leading-none">
+          <h3 className="text-3xl md:text-4xl lg:text-5xl text-center text-white font-bold tracking-tight leading-none">
             Now that you know what we are about. Let us help you save more money this year.
           </h3>
           <a
-            className="inline-block px-16 py-4 bg-grey-900 hover:bg-black text-lg font-bold uppercase text-white tracking-tight mt-12"
+            className="inline-block px-16 py-4 bg-grey-900 hover:bg-black text-base lg:text-lg font-bold uppercase text-white tracking-tight mt-12"
             href="https://google.com"
           >
             Start Saving Now

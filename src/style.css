@@ -332,6 +332,16 @@ html {
   animation: 0.5s ease-in-out 0.6s 1 both fromBottom;
 }
 
+.hero {
+  height: calc(100vh - 80px);
+}
+
+@screen md {
+  .hero {
+    height: calc(100vh - 104px);
+  }
+}
+
 .video-overlay-dark {
   background-image: linear-gradient(110deg, rgba(theme('colors.grey.900'), 1), rgba(theme('colors.grey.900'), 0));
   background-size: cover;
@@ -339,7 +349,7 @@ html {
 }
 
 .testimonial:before {
-  @apply absolute left-0 w-full h-full mt-10 ml-6;
+  @apply absolute left-0 w-full h-full mt-6 ml-3;
   content: '';
   top: 1rem;
   background-color: #f5f7fa;
@@ -351,13 +361,19 @@ html {
   content: '';
 }
 
+@screen md {
+  .testimonial:before {
+    @apply absolute left-0 w-full h-full mt-10 ml-6;
+  }
+}
+
 .grid {
   @apply -mx-12;
 }
 
 .grid-item {
   @apply mx-6 mt-24;
-  width: calc(50% - theme('spacing.12'));
+  flex: 1 0 250px;
 }
 
 .final {
