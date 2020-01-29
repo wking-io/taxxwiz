@@ -367,13 +367,18 @@ html {
   }
 }
 
-.grid {
-  @apply -mx-12;
-}
-
 .grid-item {
-  @apply mx-6 mt-24;
-  flex: 1 0 350px;
+  @apply mt-16;
+}
+@screen md {
+  .grid {
+    @apply -mx-12;
+  }
+
+  .grid-item {
+    @apply mx-6 mt-24;
+    flex: 1 1 350px;
+  }
 }
 
 .final {

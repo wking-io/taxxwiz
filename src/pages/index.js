@@ -147,7 +147,7 @@ const IndexPage = () => {
           </ul>
         </div>
       </section>
-      <section className="bg-white pb-32">
+      <section className="bg-white pb-32 overflow-x-hidden">
         <div className="w-5/6 max-w-6xl mx-auto relative testimonial">
           <h3 className="relative z-10 flex flex-col items-start text-2xl sm:text-3xl md:text-5xl tracking-tight leading-none font-bold md:-ml-12 -mt-12 w-11/12 sm:w-full">
             <span className="bg-white p-4 pb-1 md:py-1 md:px-2">Don't take our word.</span>
@@ -155,7 +155,7 @@ const IndexPage = () => {
               Hear from <span className="text-primary">happy customers</span>.
             </span>
           </h3>
-          <ul className="relative flex flex-wrap -mt-8 pb-8 md:pb-12 px-16 md:px-24 grid">
+          <ul className="relative flex flex-wrap -mt-8 pb-8 md:pb-12 px-8 md:px-24 grid">
             <li className="grid-item">
               <blockquote>
                 <QuoteIcon className="text-grey-300 h-12 pb-1 w-auto" />
