@@ -373,7 +373,7 @@ html {
 
 .grid-item {
   @apply mx-6 mt-24;
-  flex: 1 0 250px;
+  flex: 1 0 350px;
 }
 
 .final {
