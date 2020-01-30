@@ -43,10 +43,18 @@ const MobileMenu = () => (
             Contact Us
           </MenuLink>
           <MenuItem className="h-5 flex items-center mt-12" onSelect={() => {}}>
-            <a as={Link} className="block px-4 h-full w-auto hover:text-instagram" href="https://www.instagram.com/taxxwiz/?hl=en">
+            <a
+              as={Link}
+              className="block px-4 h-full w-auto hover:text-instagram"
+              href="https://www.instagram.com/taxxwiz/?hl=en"
+            >
               <InstagramIcon className="h-full w-auto" />
             </a>
-            <a as={Link} className="block px-4 h-full w-auto hover:text-facebook" href="https://www.facebook.com/taxxwiz/">
+            <a
+              as={Link}
+              className="block px-4 h-full w-auto hover:text-facebook"
+              href="https://www.facebook.com/taxxwiz/"
+            >
               <FacebookIcon className="h-full w-auto" />
             </a>
           </MenuItem>
@@ -59,7 +67,7 @@ const MobileMenu = () => (
 const DesktopMenu = () => (
   <nav className="flex-1 text-right flex items-center justify-end">
     <Link to="/" className="text-black hover:underline p-4 inline-block mr-6 lg:mr-12">
-      Save More Money
+      Start Your Return
     </Link>
     <Link to="/hiring" className="link--highlight text-white p-4 inline-block mr-6 lg:mr-12">
       We Are Hiring

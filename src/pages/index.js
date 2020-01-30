@@ -14,8 +14,8 @@ const IndexPage = () => {
       <Video
         className="object-cover top-0 w-full h-screen fixed"
         style={{ zIndex: '-1' }}
-        cloudName="dzqdvin5s"
-        publicId="taxxwiz/hero"
+        cloudName="taxx-wiz"
+        publicId="hero"
         loop="true"
         autoplay="true"
         muted="true"
@@ -32,16 +32,16 @@ const IndexPage = () => {
               <div className="mt-16 flex flex-col md:flex-row items-start md:items-center">
                 <a
                   className="px-8 py-3 md:py-4 bg-primary hover:bg-primary-dark text-base md:text-lg font-bold uppercase text-white tracking-tight"
-                  href="https://google.com"
+                  href="https://app.mytaxxwiz.com"
                 >
-                  Start Saving Now
+                  Start Now
                 </a>
-                <a
+                <Link
                   className="mt-8 md:ml-8 md:mt-0 underline hover:no-underline text-base md:text-lg font-bold text-white tracking-tight"
-                  href="https://google.com"
+                  to="/contact"
                 >
                   Want to learn more? Contact us now
-                </a>
+                </Link>
               </div>
             </div>
             <ul className="flex flex-row lg:flex-col items-center justify-start lg:justify-end pb-6 lg:pb-16">
@@ -106,6 +106,14 @@ const IndexPage = () => {
               </p>
             </div>
           </div>
+        </div>
+        <div className="flex items-center justify-center mt-32">
+          <a
+            href="http://app.mytaxxwiz.com"
+            className="inline-block px-16 py-4 bg-primary hover:bg-primary-dark text-lg font-bold uppercase text-white tracking-tight"
+          >
+            Start Your Return
+          </a>
         </div>
       </section>
       <section className="bg-white pb-48">
@@ -191,14 +199,14 @@ const IndexPage = () => {
             </li>
           </ul>
         </div>
-        <div className="flex items-center justify-center mt-32">
+        {/* <div className="flex items-center justify-center mt-32">
           <Link
             to="/hiring"
             className="inline-block px-16 py-4 bg-primary hover:bg-primary-dark text-lg font-bold uppercase text-white tracking-tight"
           >
             Read More Testimonials
           </Link>
-        </div>
+        </div> */}
       </section>
       <section className="final">
         <div className="w-5/6 pt-40 pb-8 max-w-5xl mx-auto text-center flex flex-col items-center justify-center">
@@ -207,16 +215,16 @@ const IndexPage = () => {
           </h3>
           <a
             className="inline-block px-16 py-4 bg-grey-900 hover:bg-black text-base lg:text-lg font-bold uppercase text-white tracking-tight mt-12"
-            href="https://google.com"
+            href="http://app.mytaxxwiz.com"
           >
-            Start Saving Now
+            Start Now
           </a>
-          <a
+          <Link
             className="inline-block px-8 py-4 underline hover:no-underline text-white tracking-tight mt-20"
-            href="https://google.com"
+            to="/contact"
           >
             Reach Out With Questions
-          </a>
+          </Link>
         </div>
       </section>
     </Layout>
