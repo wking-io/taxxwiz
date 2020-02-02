@@ -2,8 +2,3 @@
   base = "."
   publish = "public"
   command = "gatsby build"
-  functions = "functions/build"
-  functionsSource = "functions"
-
-[dev] 
- functions = "functions"
