@@ -209,6 +209,13 @@ html {
   }
 }
 
+@screen lg {
+	.description {
+		@apply mx-6;
+		width: calc(50% - theme('spacing.12'));
+	}
+}
+
 .contact {
   min-height: calc(100vh - 66px);
 }
