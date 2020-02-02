@@ -1,15 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import { Video } from 'cloudinary-react';
+import { DialogOverlay, DialogContent } from '@reach/dialog';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import { InstagramIcon, FacebookIcon, QuoteIcon } from '../components/icons';
 import { Image } from '../components/images';
 
+const videos = [ 'justin', 'nisha' ];
+
 const IndexPage = () => {
+  const [ isOpen, setOpen ] = useState(false);
+  const [ testimonialID, setTestimonialID ] = useState(null);
+
+  const handleTestimonialOpen = (id) => {
+    console.log('here');
+    setTestimonialID(id);
+    setOpen(true);
+  };
+
   return (
-    <Layout label="Hiring">
+    <Layout label="Home">
       <SEO title="Easy online tax returns without leaving your home" />
       <Video
         className="object-cover top-0 w-full h-screen fixed"
@@ -155,7 +167,7 @@ const IndexPage = () => {
           </ul>
         </div>
       </section>
-      <section className="bg-white pb-32 overflow-x-hidden">
+      <section className="bg-white pb-32">
         <div className="w-5/6 max-w-6xl mx-auto relative testimonial">
           <h3 className="relative z-10 flex flex-col items-start text-2xl sm:text-3xl md:text-5xl tracking-tight leading-none font-bold md:-ml-12 -mt-12 w-11/12 sm:w-full">
             <span className="bg-white p-4 pb-1 md:py-1 md:px-2">Don't take our word.</span>
@@ -163,41 +175,66 @@ const IndexPage = () => {
               Hear from <span className="text-primary">happy customers</span>.
             </span>
           </h3>
-          <ul className="relative flex flex-wrap -mt-8 pb-8 md:pb-12 px-8 md:px-24 grid">
+          <ul className="relative z-20 flex flex-wrap -mt-8 pb-8 md:pb-12 px-8 md:px-24 grid">
             <li className="grid-item">
-              <blockquote>
+              <blockquote class="flex flex-col items-start h-full">
                 <QuoteIcon className="text-grey-300 h-12 pb-1 w-auto" />
-                <p className="text-grey-700 leading-relaxed mt-6">
-                  This was the easiest tax process I’ve ever experienced. I am never going to anyone else for my taxes.
-                </p>
-                <div className="h-px bg-grey-300 w-24 mt-4" />
-                <cite className="not-italic text-lg font-bold mt-4 block">Alicia</cite>
-              </blockquote>
-            </li>
-            <li className="grid-item">
-              <blockquote>
-                <QuoteIcon className="text-grey-300 h-12 pb-1 w-auto" />
-                <p className="text-grey-700 leading-relaxed mt-6">
+                <p className="text-grey-700 leading-relaxed mt-6 flex-1">
                   Filing my taxes in the past has always been long and stressful, after working with Justin it turned
                   out to be a breeze!
                 </p>
                 <div className="h-px bg-grey-300 w-24 mt-4" />
-                <cite className="not-italic text-lg font-bold mt-4 block">Justin Keys</cite>
+                <p class="flex items-center justify-between mt-4 w-full">
+                  <cite className="not-italic text-lg font-bold block">Justin Keys</cite>
+                  <button onClick={() => handleTestimonialOpen('justin')}>Hear More</button>
+                </p>
               </blockquote>
             </li>
             <li className="grid-item">
-              <blockquote>
+              <blockquote class="flex flex-col items-start h-full">
                 <QuoteIcon className="text-grey-300 h-12 pb-1 w-auto" />
-                <p className="text-grey-700 leading-relaxed mt-6">
+                <p className="text-grey-700 leading-relaxed mt-6 flex-1">
                   So for the first time I decided to let someone else do my taxes, and I chose Taxx Wiz and oh my god I
                   don't regret it one bit. The process was easy, I got the max refund, and it was just less stressful on
                   my end.”
                 </p>
                 <div className="h-px bg-grey-300 w-24 mt-4" />
-                <cite className="not-italic text-lg font-bold mt-4 block">Nisha Morrison</cite>
+                <p class="flex items-center justify-between mt-4 w-full">
+                  <cite className="not-italic text-lg font-bold block">Nisha Morrison</cite>
+                  <button onClick={() => handleTestimonialOpen('nisha')}>Hear More</button>
+                </p>
+              </blockquote>
+            </li>
+            <li className="grid-item">
+              <blockquote class="flex flex-col items-start h-full">
+                <QuoteIcon className="text-grey-300 h-12 pb-1 w-auto" />
+                <p className="text-grey-700 leading-relaxed mt-6 flex-1">
+                  This was the easiest tax process I’ve ever experienced. I am never going to anyone else for my taxes.
+                </p>
+                <div className="h-px bg-grey-300 w-24 mt-4" />
+                <p class="flex items-center justify-between mt-4 w-full">
+                  <cite className="not-italic text-lg font-bold block">Alicia</cite>
+                </p>
               </blockquote>
             </li>
           </ul>
+          <DialogOverlay
+            className="fixed inset-0 flex items-center justify-center z-50 bg-dark-o"
+            isOpen={isOpen}
+            onDismiss={() => setOpen(false)}
+          >
+            <DialogContent className="video-wrapper">
+              {videos.map((videoID) => (
+                <Video
+                  className={`w-full h-full object-cover ${testimonialID === videoID ? 'relative' : 'hidden'}`}
+                  cloudName="taxx-wiz"
+                  publicId={videoID}
+                  secure="true"
+                  controls="true"
+                />
+              ))}
+            </DialogContent>
+          </DialogOverlay>
         </div>
         {/* <div className="flex items-center justify-center mt-32">
           <Link

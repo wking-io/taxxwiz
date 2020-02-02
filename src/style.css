@@ -377,8 +377,16 @@ html {
 
   .grid-item {
     @apply mx-6 mt-24;
-    flex: 1 1 350px;
+    width: calc(50% - theme('spacing.12'));
   }
+}
+
+.video-wrapper {
+  width: 80vw;
+  height: calc(9 / 16 * 80vw);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%. -50%);
 }
 
 .final {
@@ -430,6 +438,10 @@ html {
     position: absolute !important;
     right: 0;
     top: 0;
+  }
+
+  .bg-dark-o {
+    background-image: linear-gradient(rgba(theme("colors.black"), 0.9), rgba(theme("colors.black"), 0.9));
   }
 }
 
