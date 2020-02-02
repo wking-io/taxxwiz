@@ -186,7 +186,9 @@ const IndexPage = () => {
                 <div className="h-px bg-grey-300 w-24 mt-4" />
                 <p class="flex items-center justify-between mt-4 w-full">
                   <cite className="not-italic text-lg font-bold block">Justin Keys</cite>
-                  <button onClick={() => handleTestimonialOpen('justin')}>Hear More</button>
+                  <button className="underline hover:no-underline" onClick={() => handleTestimonialOpen('justin')}>
+                    Hear More
+                  </button>
                 </p>
               </blockquote>
             </li>
@@ -201,7 +203,9 @@ const IndexPage = () => {
                 <div className="h-px bg-grey-300 w-24 mt-4" />
                 <p class="flex items-center justify-between mt-4 w-full">
                   <cite className="not-italic text-lg font-bold block">Nisha Morrison</cite>
-                  <button onClick={() => handleTestimonialOpen('nisha')}>Hear More</button>
+                  <button className="underline hover:no-underline" onClick={() => handleTestimonialOpen('nisha')}>
+                    Hear More
+                  </button>
                 </p>
               </blockquote>
             </li>
