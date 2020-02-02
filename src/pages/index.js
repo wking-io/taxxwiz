@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
 import { Video } from 'cloudinary-react';
 import { DialogOverlay, DialogContent } from '@reach/dialog';
@@ -10,9 +10,23 @@ import { Image } from '../components/images';
 
 const videos = [ 'justin', 'nisha' ];
 
+function useWindowWidth() {
+  const [ isMobile, setSize ] = useState(typeof window != 'undefined' && window.innerWidth < 640);
+
+  useEffect(() => {
+    const handleResize = () => setSize(typeof window != 'undefined' && window.innerWidth < 640);
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  });
+  return isMobile;
+}
+
 const IndexPage = () => {
   const [ isOpen, setOpen ] = useState(false);
   const [ testimonialID, setTestimonialID ] = useState(null);
+  const isMobile = useWindowWidth();
 
   const handleTestimonialOpen = (id) => {
     console.log('here');
@@ -23,16 +37,20 @@ const IndexPage = () => {
   return (
     <Layout label="Home">
       <SEO title="Easy online tax returns without leaving your home" />
-      <Video
-        className="object-cover top-0 w-full h-screen fixed"
-        style={{ zIndex: '-1' }}
-        cloudName="taxx-wiz"
-        publicId="hero"
-        loop="true"
-        autoplay="true"
-        muted="true"
-        secure="true"
-      />
+      {isMobile ? (
+        <Image image="heroMobile" className="hero-img object-cover top-0 w-full h-screen fixed" />
+      ) : (
+        <Video
+          className="object-cover top-0 w-full h-screen fixed"
+          style={{ zIndex: '-1' }}
+          cloudName="taxx-wiz"
+          publicId="hero"
+          loop="true"
+          autoplay="true"
+          muted="true"
+          secure="true"
+        />
+      )}
       <section className="flex hero">
         <div className="flex-1 lg:aspect-16:9">
           <div className="video-overlay-dark h-full lg:aspect-content flex flex-col justify-end lg:flex-row lg:items-end lg:justify-between p-8 lg:py-0 lg:pl-24 lg:pr-16">

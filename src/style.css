@@ -342,6 +342,11 @@ html {
   }
 }
 
+.hero-img {
+  position: fixed !important;
+  z-index: -1;
+}
+
 .video-overlay-dark {
   background-image: linear-gradient(110deg, rgba(theme('colors.grey.900'), 1), rgba(theme('colors.grey.900'), 0));
   background-size: cover;

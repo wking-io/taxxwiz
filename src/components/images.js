@@ -68,6 +68,13 @@ export const Image = ({ image, ...props }) => {
           }
         }
       }
+      heroMobile: file(relativePath: { eq: "images/hero-mobile.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
     }
   `);
 
