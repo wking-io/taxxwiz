@@ -44,7 +44,7 @@ const IndexPage = () => {
               <div className="mt-16 flex flex-col md:flex-row items-start md:items-center">
                 <a
                   className="px-8 py-3 md:py-4 bg-primary hover:bg-primary-dark text-base md:text-lg font-bold uppercase text-white tracking-tight"
-                  href="https://app.mytaxxwiz.com"
+                  href="http://app.mytaxxwiz.com"
                 >
                   Start Now
                 </a>
