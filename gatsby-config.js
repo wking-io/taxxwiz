@@ -1,18 +1,18 @@
+const { CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET } = process.env;
+
 module.exports = {
   siteMetadata: {
-    title:
-      "We're Hiring | TaxxWiz",
-    titleTemplate: "%s | TaxxWiz",
-    description:
-      "Time for your taxes to start paying you.",
-    siteUrl: "https://hiring.mytaxxwiz.com",
+    title: "We're Hiring",
+    titleTemplate: '%s | TaxxWiz',
+    description: 'Join a fast growing company that has doubled every year.',
+    siteUrl: 'https://www.mytaxxwiz.com',
     image: {
-      src: "/images/favicon.png",
-      alt: "TaxxWiz Logo",
-      width: "1200",
-      height: "900",
+      src: '/images/favicon.png',
+      alt: 'TaxxWiz Logo',
+      width: '1200',
+      height: '900'
     },
-    twitterUsername: "@TaxxWiz",
+    twitterUsername: '@TaxxWiz'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -21,15 +21,8 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `src`,
-        path: `${__dirname}/src`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `data`,
-        path: `${__dirname}/data`,
-      },
+        path: `${__dirname}/src`
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -42,18 +35,18 @@ module.exports = {
         background_color: `#FFFFFF`,
         theme_color: `#FFFFFF`,
         display: `minimal-ui`,
-        icon: `static/images/favicon.png`, // This path is relative to the root of the site.
-      },
+        icon: `static/images/favicon.png` // This path is relative to the root of the site.
+      }
     },
     `gatsby-plugin-postcss`,
     `gatsby-plugin-offline`,
     {
-      resolve: "gatsby-plugin-stylelint",
+      resolve: 'gatsby-plugin-stylelint',
       options: {
-        files: ["src/*.css"],
-        configFile: "stylelint.config.js",
-      },
+        files: [ 'src/*.css' ],
+        configFile: 'stylelint.config.js'
+      }
     },
-    `gatsby-plugin-sitemap`,
-  ],
-}
+    `gatsby-plugin-sitemap`
+  ]
+};
