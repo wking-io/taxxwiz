@@ -146,6 +146,44 @@ const IndexPage = () => {
           </a>
         </div>
       </section>
+      <section className="flex">
+        <div className="w-full md:w-1/3 flex-shrink-0">
+          <Image image="bookkeeping" imgStyle={{ width: '100%', height: 'auto' }} />
+        </div>
+        <div className="relative">
+          <svg
+            className="absolute h-full w-auto"
+            width="986"
+            height="525"
+            viewBox="0 0 986 525"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="986" height="525" fill="#7B8794" />
+            <path fillRule="evenodd" clipRule="evenodd" d="M0 352.153V525H986V2.18689L0 352.153Z" fill="#52606D" />
+            <path
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M986 382.486V210.374L42.5485 0H0V525H353.23L986 382.486Z"
+              fill="#323F4B"
+            />
+          </svg>
+
+          <div className="flex flex-col items-start justify-center relative h-full max-w-md ml-16">
+            <h3 className="text-4xl font-bold tracking-tight text-white mt-6">TaxxWiz Bookkeeping</h3>
+            <p className="text-grey-200 leading-relaxed mt-4">
+              Write Offs, Business Loan Eligibility, Bigger Tax Refunds, Less Money Owed, Audit Protection,
+              GranEligibility, and Data Driven Results all have one thing in common……TaxxWiz Book Keeping.
+            </p>
+            <Link
+              className="mt-8 inline-block px-16 py-4 bg-primary hover:bg-primary-dark text-lg font-bold uppercase text-white tracking-tight"
+              to="/bookkeeping"
+            >
+              Learn More
+            </Link>
+          </div>
+        </div>
+      </section>
       <section className="bg-white pb-48">
         <div className="w-5/6 max-w-4xl mx-auto">
           <div className="flex flex-col-reverse md:flex-row items-center">

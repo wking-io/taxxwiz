@@ -17,6 +17,11 @@ html {
   visability: hidden;
 }
 
+.center-y {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .link {
   @apply underline font-semibold;
 }
@@ -210,10 +215,10 @@ html {
 }
 
 @screen lg {
-	.description {
-		@apply mx-6;
-		width: calc(50% - theme('spacing.12'));
-	}
+  .description {
+    @apply mx-6;
+    width: calc(50% - theme('spacing.12'));
+  }
 }
 
 .contact {
@@ -371,6 +376,16 @@ html {
 .testimonial:after {
   @apply absolute top-0 left-0 mt-8 w-full h-full border border-black;
   content: '';
+}
+
+.bookkeeping-title {
+  top: 14vw;
+  left: 6vw;
+}
+
+.bookkeeping-content {
+  right: 6vw;
+  bottom: 13vw;
 }
 
 @screen md {

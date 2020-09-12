@@ -75,6 +75,13 @@ export const Image = ({ image, ...props }) => {
           }
         }
       }
+      bookkeeping: file(relativePath: { eq: "images/bookkeeping.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
     }
   `);
 
