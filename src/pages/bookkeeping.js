@@ -1,11 +1,12 @@
 import React from 'react';
 
-import { Link } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Checkout from '../components/checkout';
 
-const BookkeepingPage = () => {
+const BookkeepingPage = ({ data }) => {
+  const { siteUrl } = data.site.siteMetadata;
   return (
     <Layout label="Home">
       <SEO title="Easy online tax returns without leaving your home" />
@@ -69,7 +70,7 @@ const BookkeepingPage = () => {
               </p>
               <p className="text-grey-600 mt-3">Also includes 1 Verbal Yearly assessment for Tax Season.</p>
             </div>
-            <Checkout price={process.env.GATSBY_YOURSELF_PRICE} />
+            <Checkout url={siteUrl} price={process.env.GATSBY_YOURSELF_PRICE} />
           </div>
         </div>
         <div className="p-8 border border-solid border-black relative">
@@ -83,7 +84,7 @@ const BookkeepingPage = () => {
               consultation. We will find more write offs and advantages and have everything you need to get the most
               money back this year. You will have your own robot and team in your pocket.
             </p>
-            <Checkout price={process.env.GATSBY_TEAM_PRICE} />
+            <Checkout url={siteUrl} price={process.env.GATSBY_TEAM_PRICE} />
           </div>
         </div>
         <div className="md:col-span-2 bg-grey-200 relative p-8">
@@ -111,3 +112,13 @@ const BookkeepingPage = () => {
 };
 
 export default BookkeepingPage;
+
+export const query = graphql`
+  query PageQuery {
+    site {
+      siteMetadata {
+        siteUrl
+      }
+    }
+  }
+`;

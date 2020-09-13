@@ -10,7 +10,7 @@ const getStripe = () => {
   return stripePromise;
 };
 
-const Checkout = ({ price }) => {
+const Checkout = ({ price, url }) => {
   const [ loading, setLoading ] = useState(false);
   const redirectToCheckout = async (event) => {
     event.preventDefault();
@@ -19,8 +19,8 @@ const Checkout = ({ price }) => {
     const { error } = await stripe.redirectToCheckout({
       mode: 'subscription',
       lineItems: [ { price, quantity: 1 } ],
-      successUrl: `http://localhost:8000/payment-success`,
-      cancelUrl: `http://localhost:8000/bookkeeping`,
+      successUrl: `${url}/payment-success`,
+      cancelUrl: `${url}/bookkeeping`,
     });
     if (error) {
       console.warn('Error:', error);
