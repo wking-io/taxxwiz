@@ -10,9 +10,9 @@ module.exports = {
       src: '/images/favicon.png',
       alt: 'TaxxWiz Logo',
       width: '1200',
-      height: '900'
+      height: '900',
     },
-    twitterUsername: '@TaxxWiz'
+    twitterUsername: '@TaxxWiz',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -21,8 +21,8 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `src`,
-        path: `${__dirname}/src`
-      }
+        path: `${__dirname}/src`,
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -35,8 +35,8 @@ module.exports = {
         background_color: `#FFFFFF`,
         theme_color: `#FFFFFF`,
         display: `minimal-ui`,
-        icon: `static/images/favicon.png` // This path is relative to the root of the site.
-      }
+        icon: `static/images/favicon.png`, // This path is relative to the root of the site.
+      },
     },
     `gatsby-plugin-postcss`,
     `gatsby-plugin-offline`,
@@ -44,9 +44,9 @@ module.exports = {
       resolve: 'gatsby-plugin-stylelint',
       options: {
         files: [ 'src/*.css' ],
-        configFile: 'stylelint.config.js'
-      }
+        configFile: 'stylelint.config.js',
+      },
     },
-    `gatsby-plugin-sitemap`
-  ]
+    `gatsby-plugin-sitemap`,
+  ],
 };

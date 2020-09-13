@@ -146,18 +146,19 @@ const IndexPage = () => {
           </a>
         </div>
       </section>
-      <section className="flex">
+      <section className="flex flex-col md:flex-row">
         <div className="w-full md:w-1/3 flex-shrink-0">
-          <Image image="bookkeeping" imgStyle={{ width: '100%', height: 'auto' }} />
+          <Image image="bookkeeping" imgStyle={{ width: '100%', height: '100%', objectFit: 'cover' }} />
         </div>
-        <div className="relative">
+        <div className="relative overflow-hidden w-full">
           <svg
-            className="absolute h-full w-auto"
+            className="absolute h-full w-full"
             width="986"
             height="525"
             viewBox="0 0 986 525"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="xMidYMid slice"
           >
             <rect width="986" height="525" fill="#7B8794" />
             <path fillRule="evenodd" clipRule="evenodd" d="M0 352.153V525H986V2.18689L0 352.153Z" fill="#52606D" />
@@ -169,14 +170,14 @@ const IndexPage = () => {
             />
           </svg>
 
-          <div className="flex flex-col items-start justify-center relative h-full max-w-md ml-16">
-            <h3 className="text-4xl font-bold tracking-tight text-white mt-6">TaxxWiz Bookkeeping</h3>
+          <div className="flex flex-col items-start justify-center relative w-4/5 pt-6 pb-16 lg:w-auto md:h-full max-w-md mx-auto lg:ml-16 lg:py-0">
+            <h3 className="text-3xl lg:text-4xl font-bold tracking-tight text-white mt-6">TaxxWiz Bookkeeping</h3>
             <p className="text-grey-200 leading-relaxed mt-4">
               Write Offs, Business Loan Eligibility, Bigger Tax Refunds, Less Money Owed, Audit Protection,
               GranEligibility, and Data Driven Results all have one thing in common……TaxxWiz Book Keeping.
             </p>
             <Link
-              className="mt-8 inline-block px-16 py-4 bg-primary hover:bg-primary-dark text-lg font-bold uppercase text-white tracking-tight"
+              className="mt-8 inline-block px-16 py-4 bg-primary hover:bg-primary-dark md:text-lg font-bold uppercase text-white tracking-tight"
               to="/bookkeeping"
             >
               Learn More
