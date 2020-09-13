@@ -47,8 +47,8 @@ const BookkeepingPage = ({ data }) => {
         </div>
         <div className="mt-8 md:-mb-8 lg:mb-0 w-4/5 md:w-auto mx-auto md:m-0 md:absolute bookkeeping-content md:text-white max-w-sm lg:max-w-md text-sm lg:text-base">
           <p className="leading-relaxed">
-            Write Offs, Business Loan Eligibility, Bigger Tax Refunds, Less Money Owed, Audit Protection,
-            GranEligibility, and Data Driven Results all have one thing in common……TaxxWiz Book Keeping.
+            Write Offs, Business Loan Eligibility, Bigger Tax Refunds, Less Money Owed, Audit Protection, Grant
+            Eligibility, and Data Driven Results all have one thing in common……TaxxWiz Book Keeping.
           </p>
           <p className="leading-relaxed mt-4">
             With Taxx Wiz Book Keeping we make sure you have the tools equipped to owe less money during Taxx Time/ or
