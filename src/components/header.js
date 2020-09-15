@@ -39,6 +39,10 @@ const MobileMenu = () => (
           >
             Start Your Return
           </MenuLink>
+
+          <MenuLink as={Link} to="/bookkeeping" className="font-bold text-lg hover:underline p-4 inline-block mr-12">
+            Bookkeeping
+          </MenuLink>
           <MenuLink as={Link} to="/hiring" className="font-bold text-lg hover:underline p-4 inline-block mr-12">
             We Are Hiring
           </MenuLink>
@@ -69,10 +73,13 @@ const MobileMenu = () => (
 
 const DesktopMenu = () => (
   <nav className="flex-1 text-right flex items-center justify-end">
-    <a href="http://app.mytaxxwiz.com" className="text-black hover:underline p-4 inline-block mr-6 lg:mr-12">
+    <a href="http://app.mytaxxwiz.com" className="text-black hover:underline p-4 inline-block lg:mr-8 xl:mr-12">
       Start Your Return
     </a>
-    <Link to="/hiring" className="link--highlight text-white p-4 inline-block mr-6 lg:mr-12">
+    <Link to="/bookkeeping" className="text-black hover:underline p-4 inline-block lg:mr-8 xl:mr-12">
+      Bookkeeping
+    </Link>
+    <Link to="/hiring" className="link--highlight text-white p-4 inline-block lg:mr-8 xl:mr-12">
       We Are Hiring
     </Link>
     <Link to="/contact" className="h-12 p-4 -mr-4 text-primary hover:text-primary-dark">
