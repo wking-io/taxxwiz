@@ -249,10 +249,10 @@ const HiringPage = () => {
           </div>
 
           <div className="flex flex-col flex-1 mt-8">
-            <label htmlFor="employer" className="font-bold text-sm lg:text-base">
+            <label htmlFor="telephone" className="font-bold text-sm lg:text-base">
               Phone Number
             </label>
-            <input className="bg-grey-200 mt-4 p-2" name="Most Recent Employer" id="employer" type="tel" />
+            <input className="bg-grey-200 mt-4 p-2" name="Telephone" id="telephone" type="tel" />
           </div>
           <div className="flex flex-col flex-1 mt-8">
             <label htmlFor="position" className="font-bold text-sm lg:text-base">
