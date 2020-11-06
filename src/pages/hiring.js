@@ -117,7 +117,27 @@ const HiringPage = () => {
         <div />
       </section>
       <section id="application" className="w-5/6 max-w-3xl mx-auto mt-64 md:mt-48">
-        <h2 className="text-3xl md:text-5xl font-bold tracking-tight">Application Form.</h2>
+        <h2 className="text-3xl md:text-5xl font-bold tracking-tight md:pt-20 lg:pt-0">Job Descriptions.</h2>
+        <ul className="">
+          <li className="mt-8 description">
+            <h3 className="uppercase font-bold text-xl text-primary">Taxx Wizard</h3>
+            <div className="leading-relaxed">
+              <p className="mt-4">
+                As a Taxx Wizard you will be operating as a contractor under the umbrella of Taxx Wiz. Essentially
+                running and operating your own business. As a wizard you will be responsible for establishing clients,
+                building relationships with these clients, and learning some of the ins and outs of tax law to help
+                benefit the clients you gain. This position will require good organizational skills, interpersonal
+                skills, and the ability to communicate information at a fast pace.
+              </p>
+              <p className="mt-4">
+                This position is also remote based, so potential applicants will need access to a computer and the
+                internet, as well as a mobile device with Apple iOS or Android. You will be required to attend several
+                online training sessions leading up to the beginning of the tax season.
+              </p>
+            </div>
+          </li>
+        </ul>
+        <h2 className="text-3xl md:text-5xl font-bold tracking-tight mt-12">Application Form.</h2>
         <div className="mt-4 md:mt-12 h-1 w-32 bg-primary" />
         <form
           className="mt-12 pb-32"
@@ -227,6 +247,13 @@ const HiringPage = () => {
               </div>
             </div>
           </div>
+
+          <div className="flex flex-col flex-1 mt-8">
+            <label htmlFor="employer" className="font-bold text-sm lg:text-base">
+              Phone Number
+            </label>
+            <input className="bg-grey-200 mt-4 p-2" name="Most Recent Employer" id="employer" type="tel" />
+          </div>
           <div className="flex flex-col flex-1 mt-8">
             <label htmlFor="position" className="font-bold text-sm lg:text-base">
               What position are you applying for?
@@ -241,12 +268,12 @@ const HiringPage = () => {
                   return target.value === 'Hourly Tax Preparer' ? updateShowField(true) : updateShowField(false);
                 }}
               >
-                <option value="No Answer">Make a selection...</option>
-                <option value="CPA">CPA</option>
+                {/* <option value="No Answer">Make a selection...</option> */}
+                {/* <option value="CPA">CPA</option> */}
                 <option value="Taxx Wizard">Taxx Wizard</option>
-                <option value="Hourly Tax Preparer">Hourly Tax Preparer</option>
+                {/* <option value="Hourly Tax Preparer">Hourly Tax Preparer</option>
                 <option value="Tax Lawyer">Tax Lawyer</option>
-                <option value="Potential Franchise">Potential Franchise</option>
+                <option value="Potential Franchise">Potential Franchise</option> */}
               </select>
               <div className="absolute right-0 top-0 h-full px-4 flex items-center justify-center pointer-events-none">
                 <ArrowIcon className="text-grey-500 w-auto h-4" direction="down" />
