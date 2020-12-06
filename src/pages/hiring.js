@@ -268,12 +268,12 @@ const HiringPage = () => {
                   return target.value === 'Hourly Tax Preparer' ? updateShowField(true) : updateShowField(false);
                 }}
               >
-                {/* <option value="No Answer">Make a selection...</option> */}
-                {/* <option value="CPA">CPA</option> */}
+                <option value="No Answer">Make a selection...</option>
+                <option value="CPA">CPA</option>
                 <option value="Taxx Wizard">Taxx Wizard</option>
-                {/* <option value="Hourly Tax Preparer">Hourly Tax Preparer</option>
+                <option value="Hourly Tax Preparer">Hourly Tax Preparer</option>
                 <option value="Tax Lawyer">Tax Lawyer</option>
-                <option value="Potential Franchise">Potential Franchise</option> */}
+                <option value="Potential Franchise">Potential Franchise</option>
               </select>
               <div className="absolute right-0 top-0 h-full px-4 flex items-center justify-center pointer-events-none">
                 <ArrowIcon className="text-grey-500 w-auto h-4" direction="down" />
